@@ -23,7 +23,6 @@ const MangaDetailsPage = () => {
       {manga ? (
         <article>
           <h2>{manga.data.title}</h2>
-          <p>Prix : </p>
           <ul>
             <li>Auteurs : {manga.data.authors} e</li>
             <li>Genres : {manga.data.genres} e</li>
@@ -31,6 +30,9 @@ const MangaDetailsPage = () => {
           <p>
             Synopsis : {manga.data.synopsys}
           </p>
+          <div>
+              <img src={manga.imageUrl} alt={manga.title}/>
+          </div>
         </article>
       ) : (
         <p>En cours de chargement</p>

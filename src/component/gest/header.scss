@@ -3,6 +3,11 @@
     margin: 0;
     border: 0;
     padding: 0;
+    width: 100%;
+
+    position: fixed;
+    left: 0;
+    top: 0;
     
 }
 
@@ -14,10 +19,15 @@ ul {
 
 .nav {
     background-color: #666363;
-    height: 15vh;
+    height: 8vh;
+    
+    display: flex;
+    
 }
 
 .ulNav {
+    background-color: #666363;
+    width: 100%;
     display: flex; 
     align-items: center;
     justify-content: flex-end;
@@ -29,8 +39,8 @@ li{
 
 .liLogo {
     margin-right: auto;
-    height: 80px;
-    width: 150px;
+    height: 6vh;
+    width: 10vh;
     border: solid #2833C3 3px;
     border-radius:  50px 50px 50px 50px ;
     overflow: hidden;
@@ -42,5 +52,25 @@ li{
 }
 
 .liNav {
-    margin-right: 5%;
+    margin-right: 3%;
+}
+.homeIcone {
+    background-color: white;
+    border-radius: 50%;
+    border: solid #2833C3 3px;
+    width: 5vh;
+}
+
+.loginIcone {
+    background-color: white;
+    border-radius: 50%;
+    border: solid #2833C3 3px;
+    width: 5vh;
+}
+
+.contactIcone {
+    background-color: white;
+    border-radius: 50%;
+    border: solid #2833C3 3px;
+    width: 5vh;
 }

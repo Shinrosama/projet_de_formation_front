@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+  bottom: 0;
+    width: 100%;
+  
+}
+
+.ulBloc {
+    background-color: #666363;
+    height: 8vh;
+    
+    display: flex;
+    align-items: center;
+}
+
+.liLogofoot {
+    margin-right: auto;
+    height: 6vh;
+    width: 10vh;
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+    overflow: hidden;
+}
+
+.logofoot {
+    height: 100%;
+    width: 100%;
+}
+

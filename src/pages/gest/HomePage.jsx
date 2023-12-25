@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../component/gest/Header";
+import banner from "../../assets/images/images_manga/bannières/vagabondbanner.jpg"
 import { Link } from "react-router-dom";
 import './homePage.scss'
+import Footer from "../../component/gest/Footer";
 
 
 const HomePage = () => {
@@ -18,34 +20,38 @@ const HomePage = () => {
   }, []);
 
   return (
-    <main className="main">
+      <>
       <Header />
-      <banner className="banner">
-        <img src="./public/assets/images/vagabondbanner" alt="" />
-      </banner>
+        <main className="main">
+          
+          <div className="bannerBloc">
+            <img className="bannerImg" src={banner} alt="banière" />
+            <h1>Mangas / Notes</h1>
+          </div>
 
-      <h1>Liste des mangas</h1>
 
-      {mangas ? (
-        <>
-          <section className="container">
-              {mangas.map((manga) => {
-                return (
-                  <article className="mangaBloc">
-                    <h2>{manga.title}</h2>
-                    <div className="imgBloc">
-                      <img className="mangaImg" src={manga.imageUrl} alt={manga.title}/>
-                    </div>
-                    <Link to={`/manga/details/${manga.id}`}>Voir le manga</Link>
-                  </article>
-                );
-              })}
-          </section>
-        </>
-      ) : (
-        <p>En cours de chargement</p>
-      )}
-    </main>
+          {mangas ? (
+            <>
+              <section className="container">
+                  {mangas.map((manga) => {
+                    return (
+                      <article className="mangaBloc">
+                        <h2>{manga.title}</h2>
+                        <div className="imgBloc">
+                          <img className="mangaImg" src={manga.imageUrl} alt={manga.title}/>
+                        </div>
+                        <Link to={`/manga/details/${manga.id}`}>Voir le manga</Link>
+                      </article>
+                    );
+                  })}
+              </section>
+            </>
+          ) : (
+            <p>En cours de chargement</p>
+          )}
+        </main>
+        <Footer/>
+      </>
   );
 };
 

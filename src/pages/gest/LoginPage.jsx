@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "../../component/gest/Header";
 
 const LoginPage = () => {
   const [message, setMessage] = useState(null);
@@ -39,20 +40,23 @@ const LoginPage = () => {
   };
 
   return (
-    <section>
-      {message && <p>{message}</p>}
-      <form onSubmit={handleLogin}>
-        <label>
-          username
-          <input type="text" name="username" />
-        </label>
-        <label>
-          password
-          <input type="password" name="password" />
-        </label>
-        <input type="submit" />
-      </form>
-    </section>
+      <>
+        <Header/>
+        <section>
+          {message && <p>{message}</p>}
+          <form onSubmit={handleLogin}>
+            <label>
+              username
+              <input type="text" name="username" />
+            </label>
+            <label>
+              password
+              <input type="password" name="password" />
+            </label>
+            <input type="submit" />
+          </form>
+        </section>
+      </>
   );
 };
 
