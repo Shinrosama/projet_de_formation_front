@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.main {
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.mangaBloc {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+.imgBloc {
+    height: 60vh;
+    width: 40vh;
+    
+}
+
+.mangaImg {
+    height: 100%;
+    width: 100%;
+}

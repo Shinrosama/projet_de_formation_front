@@ -27,6 +27,7 @@ const MangasPage = () => {
             return (
               <article>
                 <h2>{manga.title}</h2>
+                <img src={manga.imageUrl} alt={manga.title}/>
                 <Link to={`/manga/details/${manga.id}`}>Voir le manga</Link>
               </article>
             );

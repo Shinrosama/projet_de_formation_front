@@ -1,0 +1,46 @@
+.head {
+
+    margin: 0;
+    border: 0;
+    padding: 0;
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+.nav {
+    background-color: #666363;
+    height: 15vh;
+}
+
+.ulNav {
+    display: flex; 
+    align-items: center;
+    justify-content: flex-end;
+}
+
+li{
+    text-decoration: none;
+}
+
+.liLogo {
+    margin-right: auto;
+    height: 80px;
+    width: 150px;
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+    overflow: hidden;
+}
+
+.logo {
+    height: 100%;
+    width: 100%;
+}
+
+.liNav {
+    margin-right: 5%;
+}
