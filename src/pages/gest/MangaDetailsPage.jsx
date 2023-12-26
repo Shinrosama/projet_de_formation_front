@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Header from "../../component/gest/Header";
+import Footer from "../../component/gest/Footer";
+import './mangaDetailsPage.scss'
 
 const MangaDetailsPage = () => {
   const { id } = useParams();
@@ -21,7 +23,11 @@ const MangaDetailsPage = () => {
       <Header />
 
       {manga ? (
-        <article>
+        <article className="article">
+
+          <div>
+              <img className="imgDetail" src={manga.data.imageUrl} alt={manga.data.title}/>
+          </div>
           <h2>{manga.data.title}</h2>
           <ul>
             <li>Auteurs : {manga.data.authors} e</li>
@@ -30,13 +36,13 @@ const MangaDetailsPage = () => {
           <p>
             Synopsis : {manga.data.synopsys}
           </p>
-          <div>
-              <img src={manga.imageUrl} alt={manga.title}/>
-          </div>
+         
         </article>
       ) : (
         <p>En cours de chargement</p>
       )}
+
+      <Footer/>
     </>
   );
 };

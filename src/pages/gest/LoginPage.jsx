@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../../component/gest/Header";
+import Footer from "../../component/gest/Footer";
+import './loginPage.scss'
 
 const LoginPage = () => {
   const [message, setMessage] = useState(null);
@@ -42,7 +44,7 @@ const LoginPage = () => {
   return (
       <>
         <Header/>
-        <section>
+        <section className="section">
           {message && <p>{message}</p>}
           <form onSubmit={handleLogin}>
             <label>
@@ -56,6 +58,7 @@ const LoginPage = () => {
             <input type="submit" />
           </form>
         </section>
+        <Footer/>
       </>
   );
 };

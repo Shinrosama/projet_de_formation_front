@@ -8,6 +8,7 @@ import DashboardPage from "./pages/admin/DashboardPage";
 import AdminMangasPage from "./pages/admin/AdminMangasPage";
 import AdminMangaCreate from "./pages/admin/AdminMangaCreate";
 import AdminMangaUpdate from "./pages/admin/AdminMangaUpdate";
+import ContactsPage from "./pages/gest/ContactsPage";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/mangas" element={<MangasPage />} />
         <Route path="/manga/details/:id" element={<MangaDetailsPage />} />
+        <Route path="/contacts" element={<ContactsPage />} />
 
         <Route path="/login" element={<LoginPage />} />
 

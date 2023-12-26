@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.mainContacts {
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+
+    text-align: center;
+    padding: 10%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #8D8D8D;
+
+    height: 100vh;
+}
+
+.contactTitle {
+    display: inline-block;
+    width: 30%;
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+
+    background-color: white;
+
+}
+
+.contactBloc {
+    margin-top: 3%;
+
+    width: 40%;
+    border: solid #2833C3 3px;
+    border-radius:  25px 25px 25px 25px ;
+
+    background-color: #666363;
+}
+
+.contactMail {
+    margin-top: 3%;
+
+    display: inline-block;
+    
+    width: 80%;
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+
+    background-color: white;
+}
+
+.contactAdress {
+    margin-top: 3%;
+    margin-bottom: 3%;
+
+    display: inline-block;
+    
+    width: 80%;
+    border: solid #2833C3 3px;
+    border-radius:  25px 25px 25px 25px ;
+
+    background-color: white;
+}
