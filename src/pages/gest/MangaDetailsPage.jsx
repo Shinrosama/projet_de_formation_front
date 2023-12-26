@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Header from "../../component/gest/Header";
 import Footer from "../../component/gest/Footer";
 import './mangaDetailsPage.scss'
+import LogInReview from "../../component/gest/LoginReviews";
 
 const MangaDetailsPage = () => {
   const { id } = useParams();
@@ -36,6 +37,9 @@ const MangaDetailsPage = () => {
           <p>
             Synopsis : {manga.data.synopsys}
           </p>
+          <div>
+            <LogInReview/>
+          </div>
          
         </article>
       ) : (

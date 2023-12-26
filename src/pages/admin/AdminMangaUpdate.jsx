@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import HeaderAdmin from "../../component/admin/HeaderAdmin";
 import { useVerifyIfUserIsLogged } from "../../utils/security-utils";
 
+
 const AdminMangaUpdate = () => {
   useVerifyIfUserIsLogged();
 
@@ -72,7 +73,7 @@ const AdminMangaUpdate = () => {
             <div>
               <label>
                 Auteurs
-                <input type="text" name="priceByMonth" defaultValue={manga.price.month} />
+                <input type="text" name="authors" defaultValue={manga.authors} />
               </label>
             </div>
             <div>
@@ -85,6 +86,10 @@ const AdminMangaUpdate = () => {
               <label>
                 Synopsis
                 <input type="text" name="synopsys" defaultValue={manga.synopsys} />
+              </label>
+              <label>
+              Image
+                <input type="file" name="image" defaultValue={manga.imageUrl} />
               </label>
             </div>
             <input type="submit" />
