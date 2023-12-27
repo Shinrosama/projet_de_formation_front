@@ -47,15 +47,15 @@ const LoginPage = () => {
         <section className="section">
           {message && <p>{message}</p>}
           <form onSubmit={handleLogin}>
-            <label>
-              username
-              <input type="text" name="username" />
+            <label className="labelUser">
+              Nom d'utilisateur
+              <input className="user" type="text" name="username" />
             </label>
-            <label>
-              password
-              <input type="password" name="password" />
+            <label className="labelPassword">
+              Mot de passe
+              <input className="pass" type="password" name="password" />
             </label>
-            <input type="submit" />
+            <input className="submit" type="submit" />
           </form>
         </section>
         <Footer/>

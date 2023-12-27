@@ -1,4 +1,89 @@
 .section {
     margin-top: 8vh;
     margin-bottom: 8vh;
+
+    
+
+}
+
+form {
+
+    width: 40%;
+
+    background-color: #666363;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    border: solid #2833C3 3px;
+    border-radius:  25px 25px 25px 25px ;
+
+    margin: auto;
+    margin-top: 30vh;
+
+
+
+}
+
+.labelUser {
+    background-color: #8D8D8D;
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+
+    width: 70%;
+    height: 5vh;
+    margin-top: 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.labelPassword {
+    background-color: #8D8D8D;
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+
+    width: 70%;
+    height: 5vh;
+    margin-top: 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.user {
+
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+
+    width: 70%;
+    height: 70%;
+    
+}
+
+.pass {
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+
+    width: 70%;
+    height: 70%;
+
+    margin-left: 4%;
+    
+}
+
+.submit {
+
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+
+    width: 35%;
+    height: 4vh;
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+
 }

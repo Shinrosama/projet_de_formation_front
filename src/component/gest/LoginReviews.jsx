@@ -9,12 +9,13 @@ const LoginReviews = () => {
         { id: 3, text: 'Encore un commentaire' },
       ]);
     
-      const [newComment, setNewComment] = useState(''); // Add this line
+      const [newComment, setNewComment] = useState(''); 
     
       const handlePostComment = () => {
         if (newComment.trim() !== '') {
           setComments((prevComments) => [...prevComments, { id: prevComments.length + 1, text: newComment }]);
-          setNewComment(''); // Clear the input after posting
+          // vide le champ qui permet de poster un nouveau commentaire
+          setNewComment(''); 
         }
       };
     
@@ -48,7 +49,7 @@ const LoginReviews = () => {
             <h3>Ajouter un commentaire</h3>
             <textarea
               placeholder="Ajouter un commentaire..."
-              value={newComment} // Fix here: Use 'value' instead of 'onChange'
+              value={newComment} 
               onChange={(e) => setNewComment(e.target.value)}
             />
             <button onClick={handlePostComment}>Poster</button>
