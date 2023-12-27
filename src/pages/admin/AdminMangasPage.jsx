@@ -83,13 +83,13 @@ const AdminMangasPage = () => {
                 */}
                 <form onSubmit={(event) => handleCreateReview(event, manga.id)}>
                   <label>
-                    Review: contenu
-                    <input type="text" name="content" />
-                  </label>
-
+                    
                   <label>
                     Review: note
                     <input type="number" name="rating" />
+                  </label>
+                    Review: contenu
+                    <input type="text" name="content" />
                   </label>
 
                   <input type="submit" />

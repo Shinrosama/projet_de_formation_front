@@ -28,14 +28,20 @@ main {
 .mangaBloc {
     margin-left: 3%;
     margin-right: 3%;
+
+    padding: 1%;
+
+    background-color: #666363;
+    border: solid #2833C3 3px;
+    border-radius:  25px 25px 25px 25px ;
 }
 
 
 .imgBloc {
-    height: 60vh;
-    width: 40vh;
+    height: 50vh;
+    width: 30vh;
     border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
+    border-radius:  25px 25px 25px 25px ;
     overflow: hidden;
     
 }
@@ -66,4 +72,28 @@ h1 {
 
     text-align: right;
 
+}
+
+.divTitle {
+    height: 5vh;
+    width: 30vh;
+    background-color: #8D8D8D;
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+    overflow: hidden;
+
+    
+    margin-bottom: 3%;
+}
+
+.divLink{
+    height: 5vh;
+    width: 30vh;
+    background-color: #8D8D8D;
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+    overflow: hidden;
+
+    margin-top: 3%;
+    
 }

@@ -36,11 +36,18 @@ const HomePage = () => {
                   {mangas.map((manga) => {
                     return (
                       <article className="mangaBloc">
-                        <h2>{manga.title}</h2>
+                        
+                        <div className="divTitle">
+                          <h2>{manga.title}</h2>
+                        </div>
+                        
                         <div className="imgBloc">
                           <img className="mangaImg" src={manga.imageUrl} alt={manga.title}/>
                         </div>
-                        <Link to={`/manga/details/${manga.id}`}>Voir le manga</Link>
+                        <div className="divLink">
+                        <Link className="mangaLink" to={`/manga/details/${manga.id}`}>Voir le manga</Link>
+                        </div>
+                       
                       </article>
                     );
                   })}
