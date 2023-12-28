@@ -1,4 +1,106 @@
 .article {
     margin-top: 8vh;
     margin-bottom: 8vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #8D8D8D;
+    padding: 2%;
+    
 }
+.allBloc {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 90%;
+    border: solid #2833C3 3px;
+    border-radius:  25px 25px 25px 25px ;
+    background-color: #666363;
+    
+}
+.mangaDetailBloc {
+    width: 85%;
+    
+    
+    display: flex;
+    // flex-wrap: wrap;
+
+    // border: solid #2833C3 3px;
+    // border-radius:  25px 25px 25px 25px ;
+    padding: 1%;
+    background-color: #666363;
+}
+
+.imgBloc {
+    height: 50vh;
+    width: 35vh;
+    border: solid #2833C3 3px;
+    border-radius:  25px 25px 25px 25px ;
+    overflow: hidden;
+
+    
+}
+.imgDetail {
+    height: 100%;
+    width: 100%;
+}
+
+.infoBloc {
+
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    
+
+}
+.title {
+    text-align: center;
+    
+    
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+    padding: 2%;
+    background-color: #8D8D8D;
+    margin: 2%;
+}
+
+
+.ulInfo {
+
+    
+    
+    border: solid #2833C3 3px;
+    border-radius:  25px 25px 25px 25px ;
+    padding: 2%;
+    background-color: #8D8D8D;
+    margin: 2%;
+}
+
+.globalNote {
+    
+    
+   
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+    padding: 2%;
+    background-color: #8D8D8D;
+    margin: 2%;
+}
+
+.synopsysBloc {
+    width: 83%;
+    
+    border: solid #2833C3 3px;
+    border-radius:  25px 25px 25px 25px ;
+    padding: 1%;
+    background-color: #8D8D8D;
+
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+

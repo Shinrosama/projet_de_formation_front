@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Header from "../../component/gest/Header";
 import Footer from "../../component/gest/Footer";
 import './mangaDetailsPage.scss'
-import LogInReview from "../../component/gest/LoginReviews";
+import LoginReviews from "../../component/gest/LoginReviews";
 
 const MangaDetailsPage = () => {
   const { id } = useParams();
@@ -25,22 +25,31 @@ const MangaDetailsPage = () => {
 
       {manga ? (
         <article className="article">
+          <div className="allBloc">
+              <div className="mangaDetailBloc">
+                <div className="imgBloc">
+                    <img className="imgDetail" src={manga.data.imageUrl} alt={manga.data.title}/>
+                </div>
+                <div className="infoBloc">
+                    <h2 className="title">{manga.data.title}</h2>
+                    <ul className="ulInfo">
+                      <li>Auteurs : {manga.data.authors} e</li>
+                      <li>Genres : {manga.data.genres} e</li>
+                    </ul>
+                    <div className="globalNote">
 
-          <div>
-              <img className="imgDetail" src={manga.data.imageUrl} alt={manga.data.title}/>
+                    </div>
+                </div>
+            </div>
+            
+              <p className="synopsysBloc">
+                Synopsis : {manga.data.synopsys}
+              </p>
+           
+            <LoginReviews/> 
           </div>
-          <h2>{manga.data.title}</h2>
-          <ul>
-            <li>Auteurs : {manga.data.authors} e</li>
-            <li>Genres : {manga.data.genres} e</li>
-          </ul>
-          <p>
-            Synopsis : {manga.data.synopsys}
-          </p>
-          <div>
-            <LogInReview/>
-          </div>
-         
+        
+            
         </article>
       ) : (
         <p>En cours de chargement</p>
