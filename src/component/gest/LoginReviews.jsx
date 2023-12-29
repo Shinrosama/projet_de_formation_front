@@ -2,7 +2,7 @@
 import { useState } from "react";
 import './loginReviews.scss'
 
-function App() {
+function LoginReviews() {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
 
@@ -32,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default LoginReviews;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../../component/gest/Header";
 import Footer from "../../component/gest/Footer";
 import './loginPage.scss'
@@ -35,7 +35,7 @@ const LoginPage = () => {
     if (token) {
       localStorage.setItem("jwt", token);
       setMessage("Vous êtes bien connecté");
-      navigate("/admin/");
+      navigate("/");
     } else {
       setMessage("Erreur lors de la connexion");
     }
@@ -44,19 +44,22 @@ const LoginPage = () => {
   return (
       <>
         <Header/>
-        <section className="section">
+        <section className="sectionLog">
           {message && <p>{message}</p>}
-          <form onSubmit={handleLogin}>
+          <form onSubmit={handleLogin} className="formLog">
             <label className="labelUser">
               Nom d'utilisateur
-              <input className="user" type="text" name="username" />
+              <input className="userLog" type="text" name="username" />
             </label>
             <label className="labelPassword">
               Mot de passe
-              <input className="pass" type="password" name="password" />
+              <input className="passLog" type="password" name="password" />
             </label>
-            <input className="submit" type="submit" />
+            <input className="submitLog" type="submit" />
           </form>
+          <div className="suscribeDiv">
+            <Link className="suscribe" to="/register">Inscrivez vous</Link>
+          </div>
         </section>
         <Footer/>
       </>
