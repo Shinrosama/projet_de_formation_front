@@ -1,8 +1,12 @@
 
 import { useState } from "react";
 import './loginReviews.scss'
+import { useVerifyIfUserIsLogged } from "../../utils/security-utils";
 
 function LoginReviews() {
+  useVerifyIfUserIsLogged();
+
+
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
 
