@@ -81,6 +81,7 @@ const AdminMangasPage = () => {
                 et au submit j'appelle la fonction handleCreateReview
                 en lui passant l'id du manga actuel
                 */}
+                
                 <form onSubmit={(event) => handleCreateReview(event, manga.id)}>
                   <label>
                     
