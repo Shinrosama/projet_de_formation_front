@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import Header from "../../component/gest/Header";
 import Footer from "../../component/gest/Footer";
 import './mangaDetailsPage.scss'
-// import LoginReviews from "../../component/gest/LoginReviews";
-// import { jwtDecode } from "jwt-decode";
 import { useVerifyIfUserIsLogged } from "../../utils/security-utils";
 
 const MangaDetailsPage = () => {
@@ -27,7 +25,7 @@ const MangaDetailsPage = () => {
       const mangaResponse = await fetch("http://localhost:3005/api/mangas/" + id);
       const mangaResponseData = await mangaResponse.json();
 
-      setManga(mangaResponseData);
+      setManga(mangaResponseData.data);
     })();
   }, [id]);
 
@@ -41,43 +39,49 @@ const MangaDetailsPage = () => {
     })();
   }, []);
 
-   // je créé une fonction, qui récupère un  id de manga
-  // et qui va créer sur l'api une review
-  const handleCreateReview = async (event, mangaId) => {
+
+
+
+   // je créé une fonction, qui récupère un  id de manga et qui va créer sur l'api une review
+   const handleCreateReview = async (event, mangaId) => {
     event.preventDefault();
-    
+  
     // je récupère les valeurs du formulaire
     const content = event.target.content.value;
     const rating = event.target.rating.value;
-
+    
     // je créé un objet avec les valeurs du formulaire
-    // + l'id du manga passé en parametre
     const reviewToCreate = {
       content: content,
       rating: rating,
-      MangaId: mangaId
+    // + l'id du manga passé en parametre
+      MangaId: mangaId,
     };
-
+    console.log(reviewToCreate)
+    
     // je transforme en JSON mon objet
     const reviewToCreateJson = JSON.stringify(reviewToCreate);
 
     // je fais mon appel fetch sur la création d'une review
-    // en passant le token en authorization
-    // et le le json avec les données du form (et l'id du manga)
+    
+    
 
     try {
-      const reviewResponse = await fetch("http://localhost:3005/api/reviews", {
+      const reviewResponse = await fetch("http://localhost:3005/api/reviews" , {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+    // en passant le token en authorization        
         Authorization: "Bearer " + token,
       },
+    // et le json avec les données du form (et l'id du manga)      
       body: reviewToCreateJson,
+      
     });
-
-//on teste la réponse via un boolen si réponse ou si pas de réponse via le .ok
+    console.log(reviewToCreate)
+    //on teste la réponse via un boolen si réponse ou si pas de réponse via le .ok
     if (reviewResponse.ok) {
-//la fonction alert permet de comuniquer un résultat 
+    //la fonction alert permet de comuniquer un résultat 
       alert("Commentaire créé.");
       
       window.location.reload();
@@ -100,13 +104,13 @@ const MangaDetailsPage = () => {
           <div className="allBloc">
               <div className="mangaDetailBloc">
                 <div className="imgBloc">
-                    <img className="imgDetail" src={manga.data.imageUrl} alt={manga.data.title}/>
+                    <img className="imgDetail" src={manga.imageUrl} alt={manga.title}/>
                 </div>
                 <div className="infoBloc">
-                    <h2 className="title">{manga.data.title}</h2>
+                    <h2 className="title">{manga.title}</h2>
                     <ul className="ulInfo">
-                      <li>Auteurs : {manga.data.authors} e</li>
-                      <li>Genres : {manga.data.genres} e</li>
+                      <li>Auteurs : {manga.authors} e</li>
+                      <li>Genres : {manga.genres} e</li>
                     </ul>
                     <div className="globalNote">
 
@@ -114,7 +118,7 @@ const MangaDetailsPage = () => {
                 </div>
               </div>
               <p className="synopsysBloc">
-                Synopsis : {manga.data.synopsys}
+                Synopsis : {manga.synopsys}
               </p>
               <div>
                 <p>Donnez vorte avis.</p>
@@ -122,7 +126,8 @@ const MangaDetailsPage = () => {
 
               <div className="reviewsBloc"> 
               {reviews ? (
-                <>
+                <div>
+                
                   {reviews
                     
                     .filter((review) => review.MangaId === manga.id)
@@ -133,7 +138,8 @@ const MangaDetailsPage = () => {
                         <p>Note : {review.rating}</p>
                       </article>
                     ))}
-                </>
+              
+                </div>
               ) : (
                 <p>En cours de chargement</p>
               )}
@@ -144,7 +150,6 @@ const MangaDetailsPage = () => {
                 */}
                 
                 <form onSubmit={(event) => handleCreateReview(event, manga.id)}>
-                  
                   <label>
                     Note
                     <input type="number" name="rating" />

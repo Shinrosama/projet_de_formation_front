@@ -45,6 +45,7 @@ const AdminMangasPage = () => {
       rating: rating,
       MangaId: mangaId,
     };
+    
 
     // je transforme en JSON mon objet
     const reviewToCreateJson = JSON.stringify(reviewToCreate);
