@@ -98,9 +98,98 @@
     border-radius:  25px 25px 25px 25px ;
     padding: 1%;
     background-color: #8D8D8D;
-
     margin-top: 1%;
     margin-bottom: 1%;
 }
+.reviewsBloc {
+    display: flex;
+    flex-direction: column;
+    width: 83%;
+
+    padding: 1%;
+    
+
+}
+.reviewContent {
+    display: flex;
+    flex-direction: column;
+
+    word-wrap: break-word;
+
+    border: solid #2833C3 3px;
+    border-radius:  25px 25px 25px 25px ;
+    background-color: #8D8D8D;
+    padding: 2%;
+    margin-top: 2%;
+}
+.ratingCom {
+    display: inline-block;
+    margin: auto;
+    }
+
+
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 2%;
+}
+
+.noteBloc {
+    text-align: center;
+    width: 40%;
+    height: 5vh;
+    border: solid #2833C3 3px;
+    border-radius:  25px 25px 25px 25px ;
+    background-color: #8D8D8D;
+}
+.note {
+    text-align: center;
+
+    width: 10%;
+    height: 4vh;
+    margin: 1%;
+
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+}
+
+.commentBloc {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    width: 98%;
+    
+    border: solid #2833C3 3px;
+    border-radius:  25px 25px 25px 25px ;
+    background-color: #8D8D8D;
+
+    margin-top: 2%;
+    padding: 2%;
+}
+
+.commentArea {
+    width: 80%;
+    height: 7vh;
+    margin: auto;
+
+    border: solid #2833C3 3px;
+    border-radius:  25px 25px 25px 25px ;
+    padding: 1%;
+  
+}
+
+.submitBtn {
+    width: 50%;
+    height: 5vh;
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+
+    margin-top: 2%;
+}
+
 
 

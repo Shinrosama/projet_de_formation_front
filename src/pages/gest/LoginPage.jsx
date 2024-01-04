@@ -40,6 +40,13 @@ const LoginPage = () => {
       setMessage("Erreur lors de la connexion");
     }
   };
+  const handleLogout = () => {
+    // sortir le token du local storage
+    localStorage.removeItem("jwt");
+
+    // redirige l'utilisateur vers la page de login
+    navigate("/login");
+  };
 
   return (
       <>
@@ -56,6 +63,9 @@ const LoginPage = () => {
               <input className="passLog" type="password" name="password" />
             </label>
             <input className="submitLog" type="submit" />
+            <div>
+            <button onClick={handleLogout}>Se déconnecter</button>
+          </div>
           </form>
           <div className="suscribeDiv">
             <Link className="suscribe" to="/register">Inscrivez vous</Link>

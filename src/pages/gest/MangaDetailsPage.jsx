@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import Header from "../../component/gest/Header";
 import Footer from "../../component/gest/Footer";
 import './mangaDetailsPage.scss'
-import { useVerifyIfUserIsLogged } from "../../utils/security-utils";
+// import { useVerifyIfUserIsLogged } from "../../utils/security-utils";
 
 const MangaDetailsPage = () => {
   //un hokk créer sur mesure pour verifier si l'utilisateurest bien connecté
-  useVerifyIfUserIsLogged();
+  // useVerifyIfUserIsLogged();
 
   //on reprend l'id via le paramètre dans l'url
   const { id } = useParams();
@@ -38,9 +38,6 @@ const MangaDetailsPage = () => {
       setReviews(reviewsData)
     })();
   }, []);
-
-
-
 
    // je créé une fonction, qui récupère un  id de manga et qui va créer sur l'api une review
    const handleCreateReview = async (event, mangaId) => {
@@ -133,9 +130,10 @@ const MangaDetailsPage = () => {
                     .filter((review) => review.MangaId === manga.id)
                     .map((review) => (
                       <article className="reviewContent" key={review.id}>
+                        <p className="ratingCom">Note : {review.rating}</p>
                         <p>Utilisateur : {review.User.username}</p>
                         <p>Commentaire : {review.content}</p>
-                        <p>Note : {review.rating}</p>
+                        
                       </article>
                     ))}
               
@@ -149,14 +147,14 @@ const MangaDetailsPage = () => {
                 en lui passant l'id du manga actuel
                 */}
                 
-                <form onSubmit={(event) => handleCreateReview(event, manga.id)}>
-                  <label>
+                <form className="formContainer" onSubmit={(event) => handleCreateReview(event, manga.id)}>
+                  <label className="noteBloc">
                     Note
-                    <input type="number" name="rating" />
+                    <input className="note" type="number" name="rating" />
                   </label>
-                  <label>
+                  <label className="commentBloc">
                     Commentaire
-                    <textarea className="ComentArea" type="text" name="content" />
+                    <textarea className="commentArea" type="text" name="content" />
                   </label>
 
                   <input className="submitBtn" type="submit" />
