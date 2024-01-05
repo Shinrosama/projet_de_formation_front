@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import HeaderAdmin from "../../component/admin/HeaderAdmin";
 import { jwtDecode } from "jwt-decode";
 import { useVerifyIfUserIsLogged } from "../../utils/security-utils";
+import { Link } from "react-router-dom";
 
 const AdminMangasPage = () => {
   useVerifyIfUserIsLogged();
@@ -77,6 +78,7 @@ const AdminMangasPage = () => {
                 {decodedToken.data.role !== 3 && (
                   <button onClick={(event) => handleDeleteManga(event, manga.id)}>Supprimer</button>
                 )}
+                <Link to={`/admin/mangas/update/${manga.id}`} ><button >Modifier manga</button></Link>
                 {/* 
                 je créé un form pour chaque manga 
                 et au submit j'appelle la fonction handleCreateReview

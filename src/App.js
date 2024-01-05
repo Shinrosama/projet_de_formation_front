@@ -36,7 +36,7 @@ function App() {
         <Route path="/admin/mangas" element={<AdminMangasPage />} />
         <Route path="/admin/users" element= {<AdminUserPage />} />
         <Route path="/admin/mangas/create" element={<AdminMangaCreate />} />
-        <Route path="/admin/mangas/updateWithImg/:id" element={<AdminMangaUpdate />} />
+        <Route path="/admin/mangas/update/:id" element={<AdminMangaUpdate />} />
       </Routes>
     </BrowserRouter>
   );

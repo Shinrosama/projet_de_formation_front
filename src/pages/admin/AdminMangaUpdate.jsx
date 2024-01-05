@@ -14,7 +14,7 @@ const AdminMangaUpdate = () => {
 
   useEffect(() => {
     (async () => {
-      const mangaResponse = await fetch("http://localhost:3005/api/mangas/" + id);
+      const mangaResponse = await fetch(`http://localhost:3005/api/mangas/${id}`);
       const mangaResponseData = await mangaResponse.json();
 
       setManga(mangaResponseData.data);
@@ -24,30 +24,39 @@ const AdminMangaUpdate = () => {
   const handleUpdateManga = async (event) => {
     event.preventDefault();
 
-    const title = event.target.title.value;
-    const authors = event.target.authors.value;
-    const genres = event.target.genres.value;
-    const synopsys = event.target.synopsys.value;
+    const title = event.target.title.value
+    const authors = event.target.authors.value
+    const genres = event.target.genres.value
+    const synopsis = event.target.synopsis.value
     
+    
+    const formData = new FormData();
 
-    const mangaUpdateData = {
-      title: title,
-      authors: authors,
-      genres: genres,
-      synopsys: synopsys
-    };
+    // dans mon formdata, je créé un champs name, qui contient
+    // le nom issu du champs "name", transformé en json
+       formData.append("title", title)
+       formData.append("authors", authors)
+       formData.append("genres", genres)
+       formData.append("synopsis", synopsis)
+    // formData.append("name", JSON.stringify(name));
+    // formData.append("price", JSON.stringify(price));
+    
+    // dans mon formData, je créé un champs file, qui contient
+    // le fichier issu du champs image
+    formData.append("image", event.target.image.files[0]);
+   
 
-    const mangaUpdateDataJson = JSON.stringify(mangaUpdateData);
+    
 
     const token = localStorage.getItem("jwt");
 
-    const updateMangaResponse = await fetch("http://localhost:3005/api/mangas/" + id, {
+    const updateMangaResponse = await fetch(`http://localhost:3005/api/mangas/withImg/${id}`, {
       method: "PUT",
       headers: {
-        "Content-Type": "application/json",
+        
         Authorization: "Bearer " + token,
       },
-      body: mangaUpdateDataJson,
+      body: formData,
     });
 
     if (updateMangaResponse.status === 201) {
@@ -65,33 +74,35 @@ const AdminMangaUpdate = () => {
         {manga && (
           <form onSubmit={handleUpdateManga}>
             <div>
-              <label>
-                Titre
-                <input type="text" name="title" defaultValue={manga.title} />
-              </label>
-            </div>
-            <div>
-              <label>
-                Auteurs
-                <input type="text" name="authors" defaultValue={manga.authors} />
-              </label>
-            </div>
-            <div>
-              <label>
-                Genres
-                <input type="text" name="genres" defaultValue={manga.genres} />
-              </label>
-            </div>
-            <div>
-              <label>
-                Synopsis
-                <input type="text" name="synopsys" defaultValue={manga.synopsys} />
-              </label>
-              <label>
-              Image
-                <input type="file" name="image" defaultValue={manga.imageUrl} />
-              </label>
-            </div>
+          <label>
+            Titre
+            <input type="text" name="title" defaultValue={manga.title}/>
+          </label>
+        </div>
+        <div>
+          <label>
+            Auteurs
+            <input type="text" name="authors" defaultValue={manga.authors}/>
+          </label>
+        </div>
+        <div>
+          <label>
+            Genres
+            <input type="text" name="genres" defaultValue={manga.genres}/>
+          </label>
+        </div>
+        <div>
+          <label>
+            Synopsis
+            <input type="text" name="synopsis" defaultValue={manga.synopsis}/>
+          </label>
+        </div>
+        <div>
+          <label>
+            Image
+            <input type="file" name="image" />
+          </label>
+        </div>
             <input type="submit" />
           </form>
         )}

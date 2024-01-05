@@ -13,7 +13,8 @@ const AdminMangaCreate = () => {
     const title = event.target.title.value;
     const authors = event.target.authors.value;
     const genres = event.target.genres.value;
-    const synopsys = event.target.synopsys.value;
+    const synopsis = event.target.synopsis.value;
+   
   
 
     
@@ -30,7 +31,7 @@ const AdminMangaCreate = () => {
        formData.append("title", title)
        formData.append("authors", authors)
        formData.append("genres", genres)
-       formData.append("synopsys", synopsys)
+       formData.append("synopsis", synopsis)
     // formData.append("name", JSON.stringify(name));
     // formData.append("price", JSON.stringify(price));
     
