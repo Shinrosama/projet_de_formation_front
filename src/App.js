@@ -11,6 +11,7 @@ import AdminMangasPage from "./pages/admin/AdminMangasPage";
 import AdminMangaCreate from "./pages/admin/AdminMangaCreate";
 import AdminMangaUpdate from "./pages/admin/AdminMangaUpdate";
 import RegisterPage from "./pages/gest/RegisterPage";
+import AdminUserPage from "./pages/admin/AdminUserPage";
 
 
 
@@ -33,8 +34,9 @@ function App() {
         {/* routes coté admin */}
         <Route path="/admin/" element={<DashboardPage />} />
         <Route path="/admin/mangas" element={<AdminMangasPage />} />
+        <Route path="/admin/users" element= {<AdminUserPage />} />
         <Route path="/admin/mangas/create" element={<AdminMangaCreate />} />
-        <Route path="/admin/mangas/update/:id" element={<AdminMangaUpdate />} />
+        <Route path="/admin/mangas/updateWithImg/:id" element={<AdminMangaUpdate />} />
       </Routes>
     </BrowserRouter>
   );

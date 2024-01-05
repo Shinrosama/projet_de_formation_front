@@ -23,11 +23,15 @@ const HeaderAdmin = () => {
             <Link to="/admin/mangas">Gérer les mangas</Link>
           </li>
           <li>
+            <Link to="/admin/users">Gérer les utilisateurs</Link>
+          </li>
+          <li>
             <Link to="/admin/mangas/create">Créer un manga</Link>
           </li>
           <li>
             <Link to="/admin/mangas/update/:id">modifier un manga</Link>
           </li>
+
 
         </ul>
         <button onClick={handleLogout}>Se déconnecter</button>
