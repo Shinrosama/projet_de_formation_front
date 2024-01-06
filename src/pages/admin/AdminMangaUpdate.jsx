@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import HeaderAdmin from "../../component/admin/HeaderAdmin";
 import { useVerifyIfUserIsLogged } from "../../utils/security-utils";
+import './adminMangaUpdate.scss'
 
 
 const AdminMangaUpdate = () => {

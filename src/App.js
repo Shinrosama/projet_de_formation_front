@@ -12,6 +12,7 @@ import AdminMangaCreate from "./pages/admin/AdminMangaCreate";
 import AdminMangaUpdate from "./pages/admin/AdminMangaUpdate";
 import RegisterPage from "./pages/gest/RegisterPage";
 import AdminUserPage from "./pages/admin/AdminUserPage";
+import UserPage from "./pages/gest/UserPage";
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/mangas" element={<MangasPage />} />
         <Route path="/manga/details/:id" element={<MangaDetailsPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
+        <Route path="/user" element={<UserPage />} />
 
         {/* le login sert aux guests et admins */}
         <Route path="/login" element={<LoginPage />} />

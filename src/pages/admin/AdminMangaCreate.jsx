@@ -1,6 +1,7 @@
 import { useState } from "react";
 import HeaderAdmin from "../../component/admin/HeaderAdmin";
 import { useVerifyIfUserIsLogged } from "../../utils/security-utils";
+import './adminMangaCreate.scss'
 
 const AdminMangaCreate = () => {
   useVerifyIfUserIsLogged();

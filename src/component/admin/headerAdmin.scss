@@ -1,0 +1,72 @@
+.adminHeader {
+    font-size: 150%;
+    background-color: #666363;
+    padding: 1%;
+}
+.adminNav {
+    width: 90%;
+}
+
+ul {
+    list-style-type: none;
+}
+a{
+    color: inherit; 
+    text-decoration: none;
+}
+
+.headerAdminUl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+    
+.dashLi {
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+    padding: 1%;
+
+    background-color: #8D8D8D;
+}
+
+.mangasLi {
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+    padding: 1%;
+
+    background-color: #8D8D8D;
+    margin-left:1%;
+}
+
+.usersLi {
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+    padding: 1%;
+
+    background-color: #8D8D8D;
+    margin-left:1%;
+}
+
+.createLi {
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+    padding: 1%;
+
+    background-color: #8D8D8D;
+    margin-left:1%;
+}
+.updateLi {
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+    padding: 1%;
+
+    background-color: #8D8D8D;
+    margin-left:1%;
+}
+
+.adminLogout{
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+    padding: 1%;
+    margin-top: 1%;
+}

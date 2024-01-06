@@ -3,6 +3,7 @@ import HeaderAdmin from "../../component/admin/HeaderAdmin";
 import { jwtDecode } from "jwt-decode";
 import { useVerifyIfUserIsLogged } from "../../utils/security-utils";
 import { Link } from "react-router-dom";
+import './adminMangasPage.scss'
 
 const AdminMangasPage = () => {
   useVerifyIfUserIsLogged();

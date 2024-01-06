@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import HeaderAdmin from "../../component/admin/HeaderAdmin";
 import { jwtDecode } from "jwt-decode";
 import { useVerifyIfUserIsLogged } from "../../utils/security-utils";
+import './adminUserPage.scss'
 
 const AdminUserPage = () => {
     useVerifyIfUserIsLogged();
