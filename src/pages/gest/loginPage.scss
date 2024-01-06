@@ -9,7 +9,7 @@
 
     background-color: #8D8D8D;
 
-    height: 100vh;
+    height: 84vh;
     width: 100%;
     
     margin-top: 8vh;
@@ -70,23 +70,26 @@
 }
 
 .userLog {
-
+    text-align: center;
     border: solid #2833C3 3px;
     border-radius:  50px 50px 50px 50px ;
 
     width: 70%;
     height: 70%;
+    margin: auto;
     
 }
 
 .passLog {
+    text-align: center;
     border: solid #2833C3 3px;
     border-radius:  50px 50px 50px 50px ;
 
     width: 70%;
     height: 70%;
+    margin: auto;
 
-    margin-left: 4%;
+   
     
 }
 
@@ -99,7 +102,24 @@
     height: 4vh;
 
     margin-top: 5%;
-    margin-bottom: 5%;
+    
+
+}
+
+.btnBloc {
+    width: 70%;
+
+    background-color: #666363;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    border: solid #2833C3 3px;
+    border-radius:  25px 25px 25px 25px ;
+
+    margin-top: 2%;
+    padding: 2%;
+    
 
 }
 
@@ -113,7 +133,7 @@
     width: 35%;
     height: 5vh;
 
-    margin-top: 5%;
+    
 
     display: flex;
     align-items: center;
@@ -121,11 +141,35 @@
 }
 
 .suscribe {
-    color: white;
-    background-color: #2833C3;
+    padding: 3%;
+     
+}
+
+.userDiv {
+    text-align: center;
+
+    background-color: #8D8D8D;
+    border: solid #2833C3 3px;
     border-radius:  50px 50px 50px 50px ;
 
-    padding: 3%;
+    width: 35%;
+    height: 5vh;
 
     
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.logout {
+    background-color: #8D8D8D;
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+
+    width: 35%;
+    height: 4vh;
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+

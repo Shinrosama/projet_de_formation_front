@@ -15,15 +15,16 @@ const UserPage = () => {
         const decodedToken = jwtDecode(token);
       
         useEffect(() => {
-          (async () => {
-            const userResponse = await fetch("http://localhost:3005/api/users");
-            const userResponseData = await userResponse.json();
-            setUser(userResponseData);
-          })();
-        }, []);
+            (async () => {
+              const userResponse = await fetch("http://localhost:3005/api/users/" + decodedToken.dataId);
+              const userResponseData = await userResponse.json();
+              setUser(userResponseData.data);
+              console.log(userResponseData.data);
+            })();
+          }, [decodedToken.dataId]);
       
-        const handleDeleteUser = async (event, UserId) => {
-          await fetch("http://localhost:3005/api/users/" + UserId, {
+        const handleDeleteUser = async (event) => {
+          await fetch("http://localhost:3005/api/users/" + decodedToken.dataId, {
             method: "DELETE",
             headers: { Authorization: "Bearer " + token },
           });

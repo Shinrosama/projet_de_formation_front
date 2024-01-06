@@ -115,7 +115,7 @@ const MangaDetailsPage = () => {
                 </div>
               </div>
               <p className="synopsysBloc">
-                Synopsis : {manga.synopsys}
+                Synopsis : {manga.synopsis}
               </p>
               <div>
                 <p>Donnez vorte avis.</p>

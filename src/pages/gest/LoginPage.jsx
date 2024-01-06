@@ -55,21 +55,27 @@ const LoginPage = () => {
           {message && <p>{message}</p>}
           <form onSubmit={handleLogin} className="formLog">
             <label className="labelUser">
-              Nom d'utilisateur
-              <input className="userLog" type="text" name="username" />
+              
+              <input className="userLog" placeholder="Nom d'utilisateur" type="text" name="username" />
             </label>
             <label className="labelPassword">
-              Mot de passe
-              <input className="passLog" type="password" name="password" />
+              
+              <input className="passLog" placeholder="Mot de passe" type="password" name="password" />
             </label>
-            <input className="submitLog" type="submit" />
-            <div>
-            <button onClick={handleLogout}>Se déconnecter</button>
-          </div>
+            <input className="submitLog"  type="submit" value="Se connecter" />
+            
+              <button className="logout" onClick={handleLogout}>Se déconnecter</button>
+            
           </form>
-          <div className="suscribeDiv">
-            <Link className="suscribe" to="/register">Inscrivez vous</Link>
+          <div className="btnBloc">
+            <div className="suscribeDiv">
+              <Link className="suscribe" to="/register">Inscrivez vous</Link>
+            </div>
+            <div className="userDiv">
+              <Link className="userAcount" to="/user">Votre compte</Link>
+            </div>
           </div>
+          
         </section>
         <Footer/>
       </>
