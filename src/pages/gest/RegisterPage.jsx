@@ -61,20 +61,19 @@ if (password !== confirmPassword) {
       <>
         <Header/>
         <section className="sectionRegister">
-            <h2>Rejoignez Nous.</h2>
+            <h2 className="registerTitle">Rejoignez Nous.</h2>
           {message && <p>{message}</p>}
           <form onSubmit={handleRegistration} className="formRegister">
             <label className="labelUserReg">
-              Nom d'utilisateur
-              <input className="userReg" type="text" name="username" />
+              <input className="userReg" placeholder="Nom d'utilisateur" type="text" name="username" />
             </label>
             <label className="labelPasswordReg">
-              Mot de passe
-              <input className="passReg" type="password" name="password" />
+              
+              <input className="passReg" placeholder="Mot de passe" type="password" name="password" />
             </label>
             <label className="labelConfirmPass">
-              Confirmer le mot de passe
-              <input className="passConfirmReg" type="password" name="confirmPassword" />
+              
+              <input className="passConfirmReg" placeholder="Confirmer le mot de passe" type="password" name="confirmPassword" />
             </label>
             <input className="submitReg" type="submit" />
           </form>
