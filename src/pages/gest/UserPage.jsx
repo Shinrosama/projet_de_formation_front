@@ -13,7 +13,7 @@ const UserPage = () => {
         const [user, setUser] = useState(null);
         const token = localStorage.getItem("jwt");
         const decodedToken = jwtDecode(token);
-        const [newPassword, setNewPassword] = useState('');
+        
       
         useEffect(() => {
             (async () => {
@@ -34,24 +34,6 @@ const UserPage = () => {
           const userResponseData = await userResponse.json();
           setUser(userResponseData);
         };
-
-        const handleUpdateUser = async (event) => {
-          await fetch(`http://localhost:3005/api/users/${decodedToken.dataId}`, {
-            method: "PUT",
-            headers: { 
-              'Content-Type': 'application/json',
-              Authorization: "Bearer " + token 
-            },
-            body: JSON.stringify({ newPassword, userId: decodedToken.dataId })
-          });
-          setUser((prevUser) => ({
-            ...prevUser,
-            // Update other properties if needed
-          }));
-          // const userResponse = await fetch("http://localhost:3005/api/users");
-          // const userResponseData = await userResponse.json();
-          // setUser(userResponseData);
-        };
     
     return (
         <>
@@ -65,23 +47,6 @@ const UserPage = () => {
                         {decodedToken.data.role !== 3 && (
                             <button onClick={handleDeleteUser}>Supprimer</button>
                         )}
-                      </div>
-                      <div>
-                        <p>{user.password} </p>
-                        {decodedToken.data.role !== 3 && (
-                         <>
-                         <div>
-                           <label htmlFor="newPassword">New Password:</label>
-                           <input
-                             type="password"
-                             className="newPassword"
-                             value={newPassword}
-                             onChange={(e) => setNewPassword(e.target.value)}
-                           />
-                         </div>
-                         <button onClick={handleUpdateUser}>Modifier</button>
-                       </>
-                     )}
                       </div>
                         
                     </article>

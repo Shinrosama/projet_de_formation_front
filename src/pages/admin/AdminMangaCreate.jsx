@@ -88,7 +88,7 @@ const AdminMangaCreate = () => {
         <div>
           <label>
             Synopsis
-            <input type="text" name="synopsys" />
+            <input type="text" name="synopsis" />
           </label>
         </div>
         <div>
