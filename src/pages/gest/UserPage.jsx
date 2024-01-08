@@ -20,7 +20,7 @@ const UserPage = () => {
               const userResponse = await fetch(`http://localhost:3005/api/users/${decodedToken.dataId}`);
               const userResponseData = await userResponse.json();
               setUser(userResponseData.data);
-              console.log(userResponseData.data);
+              // console.log(userResponseData.data);
             })();
           }, [decodedToken.dataId]);
       

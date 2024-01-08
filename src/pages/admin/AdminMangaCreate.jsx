@@ -53,7 +53,9 @@ const AdminMangaCreate = () => {
       },
       // j'envoie mon formData en body
       body: formData,
+      
     });
+    console.log()
 
     if (createMangaResponse.status === 201) {
       setMessage("Manga créé !");
