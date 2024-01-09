@@ -32,9 +32,9 @@ const HeaderAdmin = () => {
           <li className="createLi">
             <Link to="/admin/mangas/create">Créer un manga</Link>
           </li>
-          <li className="updateLi">
+          {/* <li className="updateLi">
             <Link to="/admin/mangas/update/:id">modifier un manga</Link>
-          </li>
+          </li> */}
 
 
         </ul>

@@ -42,7 +42,8 @@ const HomePage = () => {
                         </div>
                         
                         <div className="imgBloc">
-                          <img className="mangaImg" src={manga.imageUrl} alt={manga.title}/>
+                          
+                          <Link className="mangaLink" to={`/manga/details/${manga.id}`}><img className="mangaImg" src={manga.imageUrl} alt={manga.title}/></Link>
                         </div>
                         <div className="divLink">
                         <Link className="mangaLink" to={`/manga/details/${manga.id}`}>Voir le manga</Link>

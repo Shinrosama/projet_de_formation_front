@@ -1,0 +1,33 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.mainggPage {
+    text-align: center;
+    height: 60vh;
+}
+
+.articleBloc {
+    text-align: center;
+    background-color: white;
+}
+
+.deleteBtn {
+    background-color: #8D8D8D;
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+
+    width: 35%;
+    height: 4vh;
+}
+
+.updateBtn {
+    background-color: #8D8D8D;
+    border: solid #2833C3 3px;
+    border-radius:  50px 50px 50px 50px ;
+
+    width: 35%;
+    height: 4vh;
+}

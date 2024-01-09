@@ -68,39 +68,39 @@ const AdminMangaCreate = () => {
     <>
       <HeaderAdmin />
       {message && <p>{message}</p>}
-      <form onSubmit={handleCreateManga}>
+      <form className="formBloc" onSubmit={handleCreateManga}>
         <div>
-          <label>
+          <label className="titleLab">
             Titre
             <input type="text" name="title" />
           </label>
         </div>
         <div>
-          <label>
+          <label className="authorsLab">
             Auteurs
             <input type="text" name="authors" />
           </label>
         </div>
         <div>
-          <label>
+          <label className="genresLab">
             Genres
             <input type="text" name="genres" />
           </label>
         </div>
         <div>
-          <label>
+          <label className="synopsisLab">
             Synopsis
             <input type="text" name="synopsis" />
           </label>
         </div>
         <div>
-          <label>
+          <label className="imageLab">
             Image
             <input type="file" name="image" />
           </label>
         </div>
 
-        <input type="submit" />
+        <input className="submitBtn" type="submit" />
       </form>
     </>
   );

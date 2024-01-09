@@ -70,41 +70,41 @@ const AdminMangaUpdate = () => {
   return (
     <>
       <HeaderAdmin />
-      <div>
+      <div className="mangaUpdateBloc">
         <>{message && <p>{message}</p>}</>
         {manga && (
-          <form onSubmit={handleUpdateManga}>
+          <form className="formBloc" onSubmit={handleUpdateManga}>
             <div>
-          <label>
+          <label className="titleLab">
             Titre
-            <input type="text" name="title" defaultValue={manga.title}/>
+            <input className="inputTitle" type="text" name="title" defaultValue={manga.title}/>
           </label>
         </div>
         <div>
-          <label>
+          <label className="authorsLab">
             Auteurs
-            <input type="text" name="authors" defaultValue={manga.authors}/>
+            <input className="inputauth" type="text" name="authors" defaultValue={manga.authors}/>
           </label>
         </div>
         <div>
-          <label>
+          <label className="genresLab">
             Genres
-            <input type="text" name="genres" defaultValue={manga.genres}/>
+            <input className="inputGen" type="text" name="genres" defaultValue={manga.genres}/>
           </label>
         </div>
         <div>
-          <label>
+          <label className="synopsisLab">
             Synopsis
-            <input type="text" name="synopsis" defaultValue={manga.synopsis}/>
+            <input className="inputSyn" type="text" name="synopsis" defaultValue={manga.synopsis}/>
           </label>
         </div>
         <div>
-          <label>
+          <label className="imageLab">
             Image
-            <input type="file" name="image" />
+            <input className="inputFile" type="file" name="image" />
           </label>
         </div>
-            <input type="submit" />
+            <input className="submitBtn" type="submit" />
           </form>
         )}
       </div>
