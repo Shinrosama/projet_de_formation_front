@@ -1,25 +1,19 @@
-.head {
+@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins';
 
-    margin: 0;
-    border: 0;
-    padding: 0;
+.head {
     width: 100%;
-    
     z-index: 1;
     position: fixed;
     top: 0; left: 0; right: 0;
 }
     
-
-
 ul {
     list-style-type: none;
 }
 
-
-
 .nav {
-    background-color: #666363;
+    background-color: $dark-gray-color;
     height: 8vh;
     
     display: flex;
@@ -27,7 +21,7 @@ ul {
 }
 
 .ulNav {
-    background-color: #666363;
+    background-color: $dark-gray-color;
     width: 100%;
     display: flex; 
     align-items: center;
@@ -42,8 +36,8 @@ li{
     margin-right: auto;
     height: 6vh;
     width: 10vh;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
+    border: $border-blue;
+    border-radius:  $border-radius-50;
     overflow: hidden;
 }
 
@@ -56,22 +50,13 @@ li{
     margin-right: 3%;
 }
 .homeIcone {
-    background-color: white;
-    border-radius: 50%;
-    border: solid #2833C3 3px;
-    width: 5vh;
+    @include icon-button;
 }
 
 .loginIcone {
-    background-color: white;
-    border-radius: 50%;
-    border: solid #2833C3 3px;
-    width: 5vh;
+    @include icon-button;
 }
 
 .contactIcone {
-    background-color: white;
-    border-radius: 50%;
-    border: solid #2833C3 3px;
-    width: 5vh;
+    @include icon-button; 
 }

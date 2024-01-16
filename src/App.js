@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 //les imports de la partie guest
 import HomePage from "./pages/gest/HomePage";
-import MangasPage from "./pages/gest/MangasPage";
 import MangaDetailsPage from "./pages/gest/MangaDetailsPage";
 import LoginPage from "./pages/gest/LoginPage";
 import ContactsPage from "./pages/gest/ContactsPage";
@@ -23,7 +22,6 @@ function App() {
       <Routes>
         {/* routes coté guest */}
         <Route path="/" element={<HomePage />} />
-        <Route path="/mangas" element={<MangasPage />} />
         <Route path="/manga/details/:id" element={<MangaDetailsPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
         <Route path="/user" element={<UserPage />} />

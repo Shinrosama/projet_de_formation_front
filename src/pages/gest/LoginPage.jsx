@@ -2,7 +2,9 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../../component/gest/Header";
 import Footer from "../../component/gest/Footer";
+import { jwtDecode } from "jwt-decode";
 import './loginPage.scss'
+
 
 const LoginPage = () => {
   const [message, setMessage] = useState(null);
@@ -34,26 +36,33 @@ const LoginPage = () => {
 
     if (token) {
       localStorage.setItem("jwt", token);
-      setMessage("Vous êtes bien connecté");
-      navigate("/");
-    } else {
-      setMessage("Erreur lors de la connexion");
+
+      const decodedToken = jwtDecode(token);
+
+      if (decodedToken.role === 1) {
+          setMessage("Vous êtes bien connecté en tant qu'admin");
+          navigate("/admin");
+      } else {
+          setMessage("Vous êtes bien connecté");
+          navigate("/");
+      }
     }
-  };
+};
   const handleLogout = () => {
     // sortir le token du local storage
     localStorage.removeItem("jwt");
 
     // redirige l'utilisateur vers la page de login
     navigate("/login");
-  };
+};
 
   return (
       <>
         <Header/>
         <section className="sectionLog">
-          {message && <p>{message}</p>}
+        {message && <p>{message}</p>}
           <form onSubmit={handleLogin} className="formLog">
+            
             <label className="labelUser">
               
               <input className="userLog" placeholder="Nom d'utilisateur" type="text" name="username" />

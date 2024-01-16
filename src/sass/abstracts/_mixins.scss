@@ -1,0 +1,32 @@
+@mixin textbox-small {
+
+    text-align: center;
+    background-color: $light-gray-color;
+    border: solid $blue-color 3px;
+    border-radius:  50px 50px 50px 50px ;
+}
+
+@mixin texbox-dark-big {
+
+
+    background-color: $dark-gray-color;
+    border: solid $blue-color 3px;
+    border-radius:  25px 25px 25px 25px ;
+}
+
+@mixin texbox-light-big {
+
+  
+    background-color: $light-gray-color;
+    border: solid $blue-color 3px;
+    border-radius:  25px 25px 25px 25px ;
+}
+
+@mixin icon-button {
+    background-color: white;
+    border-radius: 50%;
+    border: solid #2833C3 3px;
+    width: 5vh;
+}
+
+

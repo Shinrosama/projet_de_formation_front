@@ -1,4 +1,28 @@
+@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins';
+
+.mainUser {
+    text-align: center;
+    padding: 2%;
+}
+
+.userArticle {
+    height: 100vh;
+    background-color: $light-gray-color;
+}
+
 .user {
+    margin-top: 2%;
     text-align: center;
     font-size: 2rem;
+}
+
+.deleteUserBtn {
+    text-align: center;
+    background-color: white;
+    border: solid $blue-color 3px;
+    border-radius:  $border-radius-50 ;
+    margin-top: 5%;
+    width: 40%;
+    padding: 1%;
 }

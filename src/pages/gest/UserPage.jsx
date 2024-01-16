@@ -38,14 +38,14 @@ const UserPage = () => {
     return (
         <>
             <Header/>
-            <main>
+            <main className="mainUser">
             <h2>Votre espace personnel</h2>
             {user ? (
-                    <article>
-                      <div>
+                    <article className="userArticle">
+                      <div className="UserDiv">
                         <h2 className="user">{user.username}</h2>
                         {decodedToken.data.role !== 3 && (
-                            <button onClick={handleDeleteUser}>Supprimer</button>
+                            <button className="deleteUserBtn" onClick={handleDeleteUser}>Supprimer</button>
                         )}
                       </div>
                         

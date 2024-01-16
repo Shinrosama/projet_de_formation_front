@@ -1,8 +1,9 @@
-
+@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins';
 .mainDash {
     margin: 0;
     text-align: center;
-    background-color: #8D8D8D;
+    background-color: $light-gray-color;
     width: 100%;
     height: 100vh;
 }

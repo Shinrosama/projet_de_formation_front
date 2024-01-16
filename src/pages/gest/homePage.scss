@@ -1,21 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
+@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins';
 main {
-
     margin-top: 8vh;
     margin-bottom: 8vh;
-
-    background-color: #8D8D8D;
-
-}
-
-.main {
-    text-align: center;
-    
+    background-color: $light-gray-color;
 }
 
 .container {
@@ -25,71 +13,57 @@ main {
     justify-content: space-evenly;
 }
 
+.bannerBloc{
+    text-align: end;
+    position: relative;
+    height: 30vh;
+    width: 100%;  
+}
+.bannerImg {
+    width: 100%;
+    height: 100%;   
+}
+.bannerTitle {
+    display: inline-block;
+    position: absolute;
+    margin-left: 100vh;
+    margin-top: 5vh;
+    
+}
+
 .mangaBloc {
     margin-left: 3%;
     margin-right: 3%;
     margin-top: 2%;
-
     padding: 1%;
-
-    background-color: #666363;
-    border: solid #2833C3 3px;
-    border-radius:  25px 25px 25px 25px ;
+    @include texbox-dark-big;
 }
-
 
 .imgBloc {
     height: 50vh;
     width: 35vh;
-    border: solid #2833C3 3px;
-    border-radius:  25px 25px 25px 25px ;
-    overflow: hidden;
-    
-    
+    border: solid $blue-color 3px;
+    border-radius:  $border-radius-25 ;
+    overflow: hidden;   
 }
 
 .mangaImg {
     height: 100%;
-    width: 100%;
-    
-}
-
-.bannerBloc {
-
-    
-    height: 30vh;
-    width: 100%;
-    
-    
-}
-
-.bannerImg {
-
-    width: 100%;
-    height: 100%;
-    
+    width: 100%; 
 }
 
 .divTitle {
     height: 5vh;
     width: 35vh;
-    background-color: #8D8D8D;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
-    overflow: hidden;
-
-    
+    @include textbox-small;
+    overflow: hidden;   
     margin-bottom: 3%;
 }
 
 .divLink{
     height: 5vh;
     width: 35vh;
-    background-color: #8D8D8D;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
+    @include textbox-small;
     overflow: hidden;
-
-    margin-top: 3%;
-    
+    margin-top: 3%;   
 }

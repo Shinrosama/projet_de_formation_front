@@ -25,8 +25,9 @@ const HomePage = () => {
         <main className="main">
           
           <div className="bannerBloc">
+            <h1 className="bannerTitle">Mangas / Notes</h1>
             <img className="bannerImg" src={banner} alt="banière" />
-            <h1>Mangas / Notes</h1>
+
           </div>
 
 

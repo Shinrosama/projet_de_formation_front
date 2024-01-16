@@ -1,8 +1,5 @@
-*{
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins';
 
 .mainggPage {
     text-align: center;

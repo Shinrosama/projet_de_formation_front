@@ -1,46 +1,37 @@
+@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins';
+
 .article {
     margin-top: 8vh;
     margin-bottom: 8vh;
-
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #8D8D8D;
-    padding: 2%;
-    
+    background-color: $light-gray-color;
+    padding: 2%;  
 }
+
 .allBloc {
     display: flex;
     align-items: center;
     flex-direction: column;
-
     width: 90%;
-    border: solid #2833C3 3px;
-    border-radius:  25px 25px 25px 25px ;
-    background-color: #666363;
+    @include texbox-dark-big;
     
 }
 .mangaDetailBloc {
-    width: 85%;
-    
-    
+    width: 85%; 
     display: flex;
-    // flex-wrap: wrap;
-
-    // border: solid #2833C3 3px;
-    // border-radius:  25px 25px 25px 25px ;
     padding: 1%;
-    background-color: #666363;
+    background-color: $dark-gray-color;
 }
 
 .imgBloc {
     height: 50vh;
     width: 35vh;
-    border: solid #2833C3 3px;
-    border-radius:  25px 25px 25px 25px ;
-    overflow: hidden;
-
-    
+    border: $border-blue;
+    border-radius:  $border-radius-25;
+    overflow: hidden;  
 }
 .imgDetail {
     height: 100%;
@@ -48,92 +39,64 @@
 }
 
 .infoBloc {
-
     display: flex;
-    // align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    
-    
-
 }
 .title {
-    text-align: center;
-    
-    
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
+   @include textbox-small;
     padding: 2%;
-    background-color: #8D8D8D;
     margin: 2%;
 }
 
-
-.ulInfo {
-
-    
-    
-    border: solid #2833C3 3px;
-    border-radius:  25px 25px 25px 25px ;
+.ulInfo { 
+    @include texbox-light-big;
     padding: 2%;
-    background-color: #8D8D8D;
-    margin: 2%;
-}
-
-.globalNote {
-    
-    
    
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
+    margin: 2%;
+}
+
+.globalNote { 
+    @include textbox-small;
     padding: 2%;
-    background-color: #8D8D8D;
+    
     margin: 2%;
 }
 
 .synopsysBloc {
     width: 83%;
-    
-    border: solid #2833C3 3px;
-    border-radius:  25px 25px 25px 25px ;
+    @include texbox-light-big;
     padding: 1%;
-    background-color: #8D8D8D;
+    
     margin-top: 1%;
     margin-bottom: 1%;
 }
+
 .reviewsBloc {
     display: flex;
     flex-direction: column;
     width: 83%;
-
     padding: 1%;
-    
-
 }
+
 .reviewContent {
     display: flex;
     flex-direction: column;
-
     word-wrap: break-word;
-
-    border: solid #2833C3 3px;
-    border-radius:  25px 25px 25px 25px ;
-    background-color: #8D8D8D;
+    @include textbox-small;
     padding: 2%;
     margin-top: 2%;
 }
+
 .ratingCom {
     display: inline-block;
     margin: auto;
     }
 
-
-
 .formContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     margin-top: 2%;
 }
 
@@ -141,32 +104,24 @@
     text-align: center;
     width: 40%;
     height: 5vh;
-    border: solid #2833C3 3px;
-    border-radius:  25px 25px 25px 25px ;
-    background-color: #8D8D8D;
+    @include texbox-light-big
 }
+
 .note {
     text-align: center;
-
     width: 10%;
     height: 4vh;
     margin: 1%;
-
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
+    border: $border-blue;
+    border-radius:  $border-radius-50 ;
 }
 
 .commentBloc {
     text-align: center;
     display: flex;
     flex-direction: column;
-
-    width: 98%;
-    
-    border: solid #2833C3 3px;
-    border-radius:  25px 25px 25px 25px ;
-    background-color: #8D8D8D;
-
+    width: 98%;   
+    @include texbox-light-big;
     margin-top: 2%;
     padding: 2%;
 }
@@ -175,19 +130,16 @@
     width: 80%;
     height: 7vh;
     margin: auto;
-
-    border: solid #2833C3 3px;
-    border-radius:  25px 25px 25px 25px ;
+    border: $border-blue;
+    border-radius:  $border-radius-25 ;
     padding: 1%;
-  
 }
 
 .submitBtn {
     width: 50%;
     height: 5vh;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
-
+    border: $border-blue;
+    border-radius:  $border-radius-50 ;
     margin-top: 2%;
 }
 
