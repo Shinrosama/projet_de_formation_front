@@ -80,9 +80,11 @@ const LoginPage = () => {
             <div className="suscribeDiv">
               <Link className="suscribe" to="/register">Inscrivez vous</Link>
             </div>
-            <div className="userDiv">
-              <Link className="userAcount" to="/user">Votre compte</Link>
-            </div>
+            <Link className="userAcount userDiv" to="/user">
+              <div className="">
+                Votre compte
+              </div>
+            </Link>
           </div>
           
         </section>

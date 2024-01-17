@@ -11,6 +11,7 @@ const Footer = () => {
                         <Link className="home" to="/"><img className="logofoot" src={logo}alt="logo"/></Link>
                     </li>
                 </ul>
+                <p className="copy">&copy;</p>
             </div>
 
         </footer>

@@ -30,11 +30,9 @@ main {
     margin-left: 60%;
     margin-right: 5%;
     margin-top: 5%;
-    
 }
 
 .mangaBloc {
-   
     margin-top: 2%;
     padding: 2%;
     margin: 1%;
@@ -55,17 +53,26 @@ main {
 }
 
 .divTitle {
+    font-size: 0.8rem;
     height: 5vh;
     width: 38vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include textbox-small;
     overflow: hidden;   
     margin-bottom: 3%;
     padding: 2%;
 }
 
+
 .divLink{
+    font-size: 1rem;
     height: 5vh;
     width: 38vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include textbox-small;
     overflow: hidden;
     margin-top: 3%;

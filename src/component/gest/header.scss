@@ -1,5 +1,7 @@
 @import '../../sass/abstracts/variables';
 @import '../../sass/abstracts/mixins';
+@import '../../sass/base/reset';
+
 
 .head {
     width: 100%;
@@ -15,9 +17,7 @@ ul {
 .nav {
     background-color: $dark-gray-color;
     height: 8vh;
-    
     display: flex;
-    
 }
 
 .ulNav {
@@ -30,6 +30,12 @@ ul {
 
 li{
     text-decoration: none;
+    border-radius: 10%;
+}
+li:hover {
+    border: solid 6px chartreuse;
+    border-radius: 50%;
+    height: 6vh;
 }
 
 .liLogo {
@@ -37,7 +43,7 @@ li{
     height: 6vh;
     width: 10vh;
     border: $border-blue;
-    border-radius:  $border-radius-50;
+    border-radius: $border-radius-50;
     overflow: hidden;
 }
 
@@ -49,8 +55,9 @@ li{
 .liNav {
     margin-right: 3%;
 }
+
 .homeIcone {
-    @include icon-button;
+    @include icon-button; 
 }
 
 .loginIcone {

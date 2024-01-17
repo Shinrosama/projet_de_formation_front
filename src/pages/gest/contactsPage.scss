@@ -7,17 +7,18 @@
     margin-top: 8vh;
     margin-bottom: 8vh;
     text-align: center;
-    padding: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $light-gray-color;
-    height: 100vh;
+    height: 84vh;
 }
 
 .contactTitle {
+    margin-top: 3%;
     display: inline-block;
-    width: 75%;
+    width: fit-content;
+    block-size: fit-content;
     padding: 3%;
     border: solid $blue-color 3px;
     border-radius:  $border-radius-50;
@@ -27,26 +28,28 @@
 
 .contactBloc {
     margin-top: 3%;
-    width: 80%;
+    width: 70%;
     @include texbox-dark-big
 }
 
 .contactMail {
+    margin: auto;
     margin-top: 3%;
-    width: 80%;
-    display: inline-block;
-    padding: 5%;
+    width: fit-content;
+    block-size: fit-content;
+    padding: 3%;
     border: solid $blue-color 3px;
     border-radius:  $border-radius-50 ;
     background-color: white;
 }
 
 .contactAdress {
+    margin: auto;
     margin-top: 3%;
     margin-bottom: 3%;
-    display: inline-block;
-    width: 80%;
-    padding: 2%;
+    width: fit-content;
+    block-size: fit-content;
+    padding: 3%;
     border: solid $blue-color 3px;
     border-radius:  $border-radius-25 ;
     background-color: white;

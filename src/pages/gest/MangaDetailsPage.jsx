@@ -85,10 +85,10 @@ const MangaDetailsPage = () => {
               </div>
               <div className="infoBloc">
                 <h2 className="title">{manga.title}</h2>
-                <ul className="ulInfo">
-                  <li>Auteurs : {manga.authors}</li>
-                  <li>Genres : {manga.genres}</li>
-                </ul>
+                <div className="ulInfo">
+                  <div>Auteurs : {manga.authors}</div>
+                  <div>Genres : {manga.genres}</div>
+                </div>
                 <div className="globalNote">
                   <p>Note globale: {totalRating.toFixed(2)}</p>
                 </div>
@@ -109,7 +109,7 @@ const MangaDetailsPage = () => {
                     .map((review) => (
                       <article className="reviewContent" key={review.id}>
                         <p className="ratingCom">Note : {review.rating}</p>
-                        <p>Utilisateur : {review.User.username}</p>
+                        <p className="userTitle">Utilisateur : {review.User.username}</p>
                         <p>Commentaire : {review.content}</p>
                       </article>
                     ))}

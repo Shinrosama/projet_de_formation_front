@@ -45,9 +45,10 @@ const HomePage = () => {
                           
                           <Link className="mangaLink" to={`/manga/details/${manga.id}`}><img className="mangaImg" src={manga.imageUrl} alt={manga.title}/></Link>
                         </div>
-                        <div className="divLink">
-                        <Link className="mangaLink" to={`/manga/details/${manga.id}`}>Voir le manga</Link>
+                        <Link className="mangaLink" to={`/manga/details/${manga.id}`}><div className="divLink">
+                        Voir le manga
                         </div>
+                        </Link>
                        
                       </article>
                     );

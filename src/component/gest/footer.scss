@@ -1,33 +1,34 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-
-}
+@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins';
+@import '../../sass/base/reset';
 
 .footer {
     position: fixed;
     left: 0;
   bottom: 0;
     width: 100%;
-  
 }
 
 .ulBloc {
+    
     background-color: #666363;
     height: 8vh;
-    
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .liLogofoot {
-    margin-right: auto;
+    margin-left: auto;
     height: 6vh;
     width: 10vh;
     border: solid #2833C3 3px;
     border-radius:  50px 50px 50px 50px ;
     overflow: hidden;
+}
+.copy {
+    margin: auto;
+    transform: translateX(-280%);
 }
 
 .logofoot {

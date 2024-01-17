@@ -3,7 +3,6 @@
 @import '../../sass/base/reset';
 
 .article {
-    font-size: 1rem;
     margin-top: 8vh;
     margin-bottom: 8vh;
     display: flex;
@@ -14,7 +13,6 @@
 }
 
 .allBloc {
-    
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -73,9 +71,11 @@
 .synopsysBloc {
     width: 83%;
     @include texbox-light-big;
-    padding: 3%;
+    padding: 2%;
     margin-top: 1%;
     margin-bottom: 1%;
+    
+    
 }
 
 .reviewsBloc {
@@ -91,13 +91,14 @@
     word-wrap: break-word;
     @include textbox-small;
     padding: 2%;
-    margin-top: 2%;
+    margin-top: 1%;
+    text-align: left;
 }
 
 .ratingCom {
     display: inline-block;
     margin: auto;
-    padding: 3%;
+    padding: 1%;
     }
 
 .formContainer {
