@@ -2,7 +2,6 @@ import Footer from "../../component/gest/Footer";
 import Header from "../../component/gest/Header";
 import './contactsPage.scss'
 
-
 const ContactsPage = () => {
     return (
         <>
@@ -15,7 +14,7 @@ const ContactsPage = () => {
                 <div className="contactBloc">
                     <div className="contactMail">
                         <p>Mail:</p>
-                        <p>mangas.notes@boitemail.com</p>
+                        <p>manga.note@mail.com</p>
                     </div>
                     <div className="contactAdress">
                         <p>Adresse :</p>

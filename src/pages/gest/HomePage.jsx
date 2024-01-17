@@ -27,7 +27,6 @@ const HomePage = () => {
           <div className="bannerBloc">
             <h1 className="bannerTitle">Mangas / Notes</h1>
             <img className="bannerImg" src={banner} alt="banière" />
-
           </div>
 
 
@@ -42,7 +41,7 @@ const HomePage = () => {
                           <h2>{manga.title}</h2>
                         </div>
                         
-                        <div className="imgBloc">
+                        <div className="imgBloc1">
                           
                           <Link className="mangaLink" to={`/manga/details/${manga.id}`}><img className="mangaImg" src={manga.imageUrl} alt={manga.title}/></Link>
                         </div>

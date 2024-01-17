@@ -1,10 +1,19 @@
+@import '../../sass/abstracts/typographie';
 
 *{
     margin: 0;
     padding: 0;
     border: 0;
+
+    font-family: 'roboto';
 }
 
 h1 {
-    font-family: "komika";
+    font-family: 'komika';
 }
+
+h2 {
+    font-family: 'komika';
+}
+
+

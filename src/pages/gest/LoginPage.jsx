@@ -39,7 +39,7 @@ const LoginPage = () => {
 
       const decodedToken = jwtDecode(token);
 
-      if (decodedToken.role === 1) {
+      if (decodedToken.role <= 2) {
           setMessage("Vous êtes bien connecté en tant qu'admin");
           navigate("/admin");
       } else {

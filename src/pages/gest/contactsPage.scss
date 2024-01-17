@@ -1,7 +1,9 @@
 @import '../../sass/abstracts/variables';
 @import '../../sass/abstracts/mixins';
+@import '../../sass/base/reset';
 
 .mainContacts {
+    font-size: 1rem;
     margin-top: 8vh;
     margin-bottom: 8vh;
     text-align: center;
@@ -15,7 +17,8 @@
 
 .contactTitle {
     display: inline-block;
-    width: 30%;
+    width: 75%;
+    padding: 3%;
     border: solid $blue-color 3px;
     border-radius:  $border-radius-50;
     background-color: white;
@@ -24,14 +27,15 @@
 
 .contactBloc {
     margin-top: 3%;
-    width: 40%;
+    width: 80%;
     @include texbox-dark-big
 }
 
 .contactMail {
     margin-top: 3%;
-    display: inline-block;
     width: 80%;
+    display: inline-block;
+    padding: 5%;
     border: solid $blue-color 3px;
     border-radius:  $border-radius-50 ;
     background-color: white;
@@ -42,6 +46,7 @@
     margin-bottom: 3%;
     display: inline-block;
     width: 80%;
+    padding: 2%;
     border: solid $blue-color 3px;
     border-radius:  $border-radius-25 ;
     background-color: white;

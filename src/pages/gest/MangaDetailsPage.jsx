@@ -65,7 +65,7 @@ const MangaDetailsPage = () => {
         alert("Commentaire créé.");
         window.location.reload();
       } else {
-        alert("Le commentaire n'a pas pu être créé. Veuillez réessayer.");
+        alert("Le commentaire n'a pas pu être créé. Veuillez vous connecter.");
       }
     } catch (error) {
       alert("Une erreur est survenue. Veuillez réessayer");

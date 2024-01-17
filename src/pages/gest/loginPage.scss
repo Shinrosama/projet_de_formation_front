@@ -1,7 +1,11 @@
 @import '../../sass/abstracts/variables';
 @import '../../sass/abstracts/mixins';
+@import '../../sass/base/reset';
+
+
 
 .sectionLog {
+    font-size: 1rem;
     
     background-color:$light-gray-color;
     height: 84vh;
@@ -64,7 +68,7 @@
 
 .submitLog {
     @include textbox-small;
-    width: 35%;
+    width: 45%;
     height: 4vh;
     margin-top: 5%;  
 }
@@ -82,22 +86,21 @@
 .suscribeDiv {
     text-align: center;
     @include textbox-small;
-    width: 35%;
+    width: 40%;
     height: 5vh;
+    padding: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.suscribe {
-    padding: 3%;    
-}
 
 .userDiv {
     text-align: center;
     @include textbox-small;
-    width: 35%;
+    width: 40%;
     height: 5vh;
+    padding: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,7 +108,7 @@
 
 .logout {
     @include textbox-small;
-    width: 35%;
+    width: 45%;
     height: 4vh;
     margin-top: 2%;
     margin-bottom: 2%;

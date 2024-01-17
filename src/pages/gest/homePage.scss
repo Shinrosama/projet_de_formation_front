@@ -1,5 +1,6 @@
 @import '../../sass/abstracts/variables';
 @import '../../sass/abstracts/mixins';
+@import '../../sass/base/reset';
 main {
     margin-top: 8vh;
     margin-bottom: 8vh;
@@ -14,33 +15,35 @@ main {
 }
 
 .bannerBloc{
-    text-align: end;
     position: relative;
     height: 30vh;
-    width: 100%;  
+    width: 100%;
 }
 .bannerImg {
     width: 100%;
     height: 100%;   
 }
 .bannerTitle {
+    font-size: 1.5rem;
     display: inline-block;
     position: absolute;
-    margin-left: 100vh;
-    margin-top: 5vh;
+    margin-left: 60%;
+    margin-right: 5%;
+    margin-top: 5%;
     
 }
 
 .mangaBloc {
    
     margin-top: 2%;
-    padding: 1%;
+    padding: 2%;
+    margin: 1%;
     @include texbox-dark-big;
 }
 
-.imgBloc {
+.imgBloc1 {
     height: 50vh;
-    width: 35vh;
+    width: 40vh;
     border: solid $blue-color 3px;
     border-radius:  $border-radius-25 ;
     overflow: hidden;   
@@ -53,16 +56,18 @@ main {
 
 .divTitle {
     height: 5vh;
-    width: 35vh;
+    width: 38vh;
     @include textbox-small;
     overflow: hidden;   
     margin-bottom: 3%;
+    padding: 2%;
 }
 
 .divLink{
     height: 5vh;
-    width: 35vh;
+    width: 38vh;
     @include textbox-small;
     overflow: hidden;
-    margin-top: 3%;   
+    margin-top: 3%;
+    padding: 2%;   
 }
