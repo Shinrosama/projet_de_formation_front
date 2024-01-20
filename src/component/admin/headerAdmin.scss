@@ -1,3 +1,7 @@
+@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins';
+@import '../../sass/base/reset';
+
 .adminHeader {
     font-size: 150%;
     background-color: #666363;
@@ -42,7 +46,6 @@ a{
     border: solid #2833C3 3px;
     border-radius:  50px 50px 50px 50px ;
     padding: 1%;
-
     background-color: #8D8D8D;
     margin-left:1%;
 }
@@ -51,7 +54,6 @@ a{
     border: solid #2833C3 3px;
     border-radius:  50px 50px 50px 50px ;
     padding: 1%;
-
     background-color: #8D8D8D;
     margin-left:1%;
 }
@@ -59,14 +61,13 @@ a{
     border: solid #2833C3 3px;
     border-radius:  50px 50px 50px 50px ;
     padding: 1%;
-
     background-color: #8D8D8D;
     margin-left:1%;
 }
 
 .adminLogout{
     border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
+    border-radius: $border-radius-50;
     padding: 1%;
     margin-top: 1%;
 }

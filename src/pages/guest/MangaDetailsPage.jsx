@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Header from "../../component/gest/Header";
-import Footer from "../../component/gest/Footer";
+import Header from "../../component/guest/Header";
+import Footer from "../../component/guest/Footer";
 import './mangaDetailsPage.scss'
 
 const MangaDetailsPage = () => {

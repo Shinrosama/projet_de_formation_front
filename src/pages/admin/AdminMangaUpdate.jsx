@@ -77,31 +77,31 @@ const AdminMangaUpdate = () => {
             <div>
           <label className="titleLab">
             Titre
-            <input className="inputTitle" type="text" name="title" defaultValue={manga.title}/>
+            <input className="inputTitle1" type="text" name="title" defaultValue={manga.title}/>
           </label>
         </div>
         <div>
           <label className="authorsLab">
             Auteurs
-            <input className="inputauth" type="text" name="authors" defaultValue={manga.authors}/>
+            <input className="inputauth1" type="text" name="authors" defaultValue={manga.authors}/>
           </label>
         </div>
         <div>
           <label className="genresLab">
             Genres
-            <input className="inputGen" type="text" name="genres" defaultValue={manga.genres}/>
+            <input className="inputGen1" type="text" name="genres" defaultValue={manga.genres}/>
           </label>
         </div>
         <div>
           <label className="synopsisLab">
             Synopsis
-            <input className="inputSyn" type="text" name="synopsis" defaultValue={manga.synopsis}/>
+            <input className="inputSyn1" type="text" name="synopsis" defaultValue={manga.synopsis}/>
           </label>
         </div>
         <div>
           <label className="imageLab">
             Image
-            <input className="inputFile" type="file" name="image" />
+            <input className="inputFile1" type="file" name="image" />
           </label>
         </div>
             <input className="submitBtn" type="submit" />

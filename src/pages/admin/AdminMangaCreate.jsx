@@ -16,10 +16,6 @@ const AdminMangaCreate = () => {
     const genres = event.target.genres.value;
     const synopsis = event.target.synopsis.value;
    
-  
-
-    
-
     // const mangaToCreateJson = JSON.stringify(mangaToCreate);
 
     // je créé un objet "FormData" => ça me permet d'envoyer
@@ -67,41 +63,43 @@ const AdminMangaCreate = () => {
   return (
     <>
       <HeaderAdmin />
-      {message && <p>{message}</p>}
-      <form className="formBloc" onSubmit={handleCreateManga}>
-        <div>
-          <label className="titleLab">
-            Titre
-            <input type="text" name="title" />
-          </label>
-        </div>
-        <div>
-          <label className="authorsLab">
-            Auteurs
-            <input type="text" name="authors" />
-          </label>
-        </div>
-        <div>
-          <label className="genresLab">
-            Genres
-            <input type="text" name="genres" />
-          </label>
-        </div>
-        <div>
-          <label className="synopsisLab">
-            Synopsis
-            <input type="text" name="synopsis" />
-          </label>
-        </div>
-        <div>
-          <label className="imageLab">
-            Image
-            <input type="file" name="image" />
-          </label>
-        </div>
+      <main className="mainManga1">
+          {message && <p>{message}</p>}
+          <form className="formBloc1" onSubmit={handleCreateManga}>
+            <div>
+              <label className="titleLab1">
+                Titre
+                <input className="titleIn" type="text" name="title" />
+              </label>
+            </div>
+            <div>
+              <label className="authorsLab1">
+                Auteurs
+                <input className="authorsIn" type="text" name="authors" />
+              </label>
+            </div>
+            <div>
+              <label className="genresLab1">
+                Genres
+                <input className="genresIn" type="text" name="genres" />
+              </label>
+            </div>
+            <div>
+              <label className="synopsisLab1">
+                Synopsis
+                <input className="synopsisIn" type="text" name="synopsis" />
+              </label>
+            </div>
+            <div>
+              <label className="imageLab1">
+                Image
+                <input className="imageIn" type="file" name="image" />
+              </label>
+            </div>
 
-        <input className="submitBtn" type="submit" />
-      </form>
+            <input className="submitBtn" type="submit" />
+          </form>
+      </main>
     </>
   );
 };

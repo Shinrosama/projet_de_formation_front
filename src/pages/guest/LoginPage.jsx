@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Header from "../../component/gest/Header";
-import Footer from "../../component/gest/Footer";
+import Header from "../../component/guest/Header";
+import Footer from "../../component/guest/Footer";
 import { jwtDecode } from "jwt-decode";
 import './loginPage.scss'
 
@@ -77,9 +77,11 @@ const LoginPage = () => {
             
           </form>
           <div className="btnBloc">
-            <div className="suscribeDiv">
-              <Link className="suscribe" to="/register">Inscrivez vous</Link>
-            </div>
+            <Link className="suscribe suscribeDiv" to="/register">
+              <div className="">
+                Inscrivez vous
+              </div>
+            </Link>
             <Link className="userAcount userDiv" to="/user">
               <div className="">
                 Votre compte

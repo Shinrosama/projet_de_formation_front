@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="ulBloc">
                 <ul>
-                    <li className="liLogofoot">
+                    <li className="liLogo">
                         <Link className="home" to="/"><img className="logofoot" src={logo}alt="logo"/></Link>
                     </li>
                 </ul>

@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { jwtDecode } from "jwt-decode";
 import { useVerifyIfUserIsLogged } from "../../utils/security-utils";
-import Footer from '../../component/gest/Footer'
-import Header from '../../component/gest/Header'
+import Footer from '../../component/guest/Footer'
+import Header from '../../component/guest/Header'
 import './userPage.scss'
 
 const UserPage = () => {

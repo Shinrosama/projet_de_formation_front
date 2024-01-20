@@ -1,0 +1,94 @@
+@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins';
+@import '../../sass/base/reset';
+
+//je définit le header et le fait qu'il soit fixe
+.head {
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+}
+//je ne veux pas que les listes aient de puces 
+ul {
+    list-style-type: none;
+}
+//je définit la barre nav
+.nav {
+    background-color: $dark-gray-color;
+    height: 8vh;
+    display: flex;
+}
+//je définit le comportement de la liste dans la nav
+.ulNav {
+    background-color: $dark-gray-color;
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: flex-end;
+}
+//je définit le style commun des entrées de la liste 
+li{
+    text-decoration: none;
+    border-radius: 10%;
+}
+//je définit un hover pour le logo
+.liLogo:hover {
+    border: $border-white;
+    height: 6vh;
+    border-radius: $border-radius-50;
+}
+//je donne son style au logo
+.liLogo {
+    margin-right: auto;
+    height: 6vh;
+    width: 10vh;
+    border: $border-blue;
+    border-radius: $border-radius-50;
+    overflow: hidden;
+}
+//je veut que la taille de l'image prenne 100% de la div
+.logo {
+    height: 100%;
+    width: 100%;
+}
+// je définit le style de chaque icone et les espaces entres eux
+.homeIcone {
+    @include icon-button; 
+}
+
+.homeIcone:hover {
+    border: $border-white;
+}
+.home {
+    width: 5vh;
+    height: 5vh;
+    margin-right: 3%;
+    border-radius: $border-radius-50;
+}
+
+.loginIcone {
+    @include icon-button;
+}
+.loginIcone:hover {
+    border: $border-white;
+}
+.login {
+    width: 5vh;
+    height: 5vh;
+    margin-right: 3%;
+    border-radius: $border-radius-50;
+}
+
+.contactIcone {
+    @include icon-button; 
+}
+.contactIcone:hover {
+    border: $border-white;
+}
+.contacts {
+    width: 5vh;
+    height: 5vh;
+    margin-right: 3%;
+    border-radius: $border-radius-50;
+}

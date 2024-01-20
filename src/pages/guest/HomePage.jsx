@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Header from "../../component/gest/Header";
+import Header from "../../component/guest/Header";
 import banner from "../../assets/images/images_manga/bannières/vagabondbanner.jpg"
 import { Link } from "react-router-dom";
 import './homePage.scss'
-import Footer from "../../component/gest/Footer";
+import Footer from "../../component/guest/Footer";
 
 
 const HomePage = () => {

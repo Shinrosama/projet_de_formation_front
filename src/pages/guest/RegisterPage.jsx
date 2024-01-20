@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Header from "../../component/gest/Header";
-import Footer from "../../component/gest/Footer";
+import Header from "../../component/guest/Header";
+import Footer from "../../component/guest/Footer";
 import './registerPage.scss'
 
 const RegisterPage = () => {

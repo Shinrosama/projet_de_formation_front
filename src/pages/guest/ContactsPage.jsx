@@ -1,5 +1,5 @@
-import Footer from "../../component/gest/Footer";
-import Header from "../../component/gest/Header";
+import Footer from "../../component/guest/Footer";
+import Header from "../../component/guest/Header";
 import './contactsPage.scss'
 
 const ContactsPage = () => {

@@ -4,27 +4,32 @@
 
 .mainggPage {
     text-align: center;
-    height: 60vh;
+    height: 81vh;
+    margin: 0;
 }
 
 .articleBloc {
     text-align: center;
-    background-color: white;
+    background-color: $light-gray-color;
+}
+.mangaTitle1 {
+    margin-bottom: 1%;
 }
 
 .deleteBtn {
-    background-color: #8D8D8D;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
+    background-color:white;
+    border: $border-blue;
+    border-radius:  $border-radius-50 ;
 
     width: 35%;
     height: 4vh;
+    margin-right: 1%;
 }
 
 .updateBtn {
-    background-color: #8D8D8D;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
+    background-color:white;
+    border: $border-blue;
+    border-radius:  $border-radius-50 ;
 
     width: 35%;
     height: 4vh;

@@ -10,62 +10,102 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: white;
+    background-color: $light-gray-color;
 }
 
 .titleLab {
-    display: inline-block;
-
-    background-color: #8D8D8D;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
-    
-    height: 4vh;
+    height: 6vh;
+    @include textbox-small;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 70vw;
+    padding: 1%;
 }
-.inputTilte {
 
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
+.inputTitle1 {
+    text-align: center;
+    border: $border-blue;
+    border-radius: $border-radius-50;
+    width: 80%;
+    height: 70%;
+    margin: auto;
 }
 
 .authorsLab {
-    display: inline-block;
+    height: 6vh;
+    @include textbox-small;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 70vw;
+    padding: 1%;
+}
 
-    background-color: #8D8D8D;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
-
-    height: 4vh;
+.inputauth1 {
+    text-align: center;
+    border: $border-blue;
+    border-radius: $border-radius-50;
+    width: 80%;
+    height: 70%;
+    margin: auto;
 }
 
 .genresLab {
-    display: inline-block;
+    height: 6vh;
+    @include textbox-small;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 70vw;
+    padding: 1%;
+}
 
-    background-color: #8D8D8D;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
-
-    height: 4vh;
+.inputGen1 {
+    text-align: center;
+    border: $border-blue;
+    border-radius: $border-radius-50;
+    width: 80%;
+    height: 70%;
+    margin: auto;
 }
 
 .synopsisLab {
-    display: inline-block;
+    height: 6vh;
+    @include textbox-small;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 70vw;
+    padding: 1%;
+}
 
-    background-color: #8D8D8D;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
-
-    height: 4vh;
+.inputSyn1 {
+    text-align: center;
+    border: $border-blue;
+    border-radius: $border-radius-50;
+    width: 80%;
+    height: 70%;
+    margin: auto;
 }
 
 .imageLab {
-    display: inline-block;
+    height: 6vh;
+    @include textbox-small;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 70vw;
+    padding: 1%;
+}
 
-    background-color: #8D8D8D;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
-
-    height: 4vh;
+.inputFile1 {
+    text-align: center;
+    border: $border-blue;
+    border-radius: $border-radius-50;
+    width: 80%;
+    height: 70%;
+    margin: auto;
 }
 
 

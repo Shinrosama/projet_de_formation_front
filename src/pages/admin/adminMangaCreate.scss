@@ -2,65 +2,112 @@
 @import '../../sass/abstracts/mixins';
 @import '../../sass/base/reset';
 
-.formBloc {
-    width: 100%;
-    height: 80vh;
-
+.mainManga1 {
+    margin: 0;
+}
+.formBloc1 {
+    height: 86vh;
+    width: 100vw;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: white;
-}
-
-.titleLab {
-    display: inline-block;
-
-    background-color: #8D8D8D;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
+    background-color: $light-gray-color;
     
-    padding: 10px;
-    height: 4vh;
 }
 
-.authorsLab {
-    display: inline-block;
-
-    background-color: #8D8D8D;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
-
-    height: 4vh;
+.titleLab1 {
+    
+    height: 6vh;
+    @include textbox-small;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 70vw;
+    padding: 1%;
+}
+.titleIn {
+    text-align: center;
+    border: $border-blue;
+    border-radius: $border-radius-50;
+    width: 80%;
+    height: 70%;
+    margin: auto;
 }
 
-.genresLab {
-    display: inline-block;
 
-    background-color: #8D8D8D;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
-
-    height: 4vh;
+.authorsLab1 {
+    height: 6vh;
+    @include textbox-small;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 70vw;
+    padding: 1%;
+}
+.authorsIn {
+    text-align: center;
+    border: $border-blue;
+    border-radius: $border-radius-50;
+    width: 80%;
+    height: 70%;
+    margin: auto;
 }
 
-.synopsisLab {
-    display: inline-block;
-
-    background-color: #8D8D8D;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
-
-    height: 4vh;
+.genresLab1 {
+    height: 6vh;
+    @include textbox-small;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 70vw;
+    padding: 1%;
 }
 
-.imageLab {
-    display: inline-block;
+.genresIn {
+    text-align: center;
+    border: $border-blue;
+    border-radius: $border-radius-50;
+    width: 80%;
+    height: 70%;
+    margin: auto;
+}
 
-    background-color: #8D8D8D;
-    border: solid #2833C3 3px;
-    border-radius:  50px 50px 50px 50px ;
+.synopsisLab1 {
+    height: 6vh;
+    @include textbox-small;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 70vw;
+    padding: 1%;
+}
 
-    height: 4vh;
+.synopsisIn {
+    text-align: center;
+    border: $border-blue;
+    border-radius: $border-radius-50;
+    width: 80%;
+    height: 70%;
+    margin: auto;
+}
+
+.imageLab1 {
+    height: 6vh;
+    @include textbox-small;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 70vw;
+    padding: 1%;
+}
+
+.imageIn {
+    text-align: center;
+    border: $border-blue;
+    border-radius: $border-radius-50;
+    width: 80%;
+    height: 70%;
+    margin: auto;
 }

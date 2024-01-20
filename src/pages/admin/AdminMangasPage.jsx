@@ -77,7 +77,7 @@ const AdminMangasPage = () => {
             {mangas.map((manga) => {
               return (
                 <article className="articleBloc">
-                  <h2>{manga.title}</h2>
+                  <h2 className="mangaTitle1">{manga.title}</h2>
                   {decodedToken.data.role !== 3 && (
                     <button className="deleteBtn" onClick={(event) => handleDeleteManga(event, manga.id)}>Supprimer</button>
                   )}

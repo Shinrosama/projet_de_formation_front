@@ -3,15 +3,15 @@
     text-align: center;
     background-color: $light-gray-color;
     border: solid $blue-color 3px;
-    border-radius:  50px 50px 50px 50px ;
+    border-radius:  $border-radius-50 ;
 }
 
 @mixin texbox-dark-big {
 
 
     background-color: $dark-gray-color;
-    border: solid $blue-color 3px;
-    border-radius:  25px 25px 25px 25px ;
+    border: $border-blue;
+    border-radius:  $border-radius-25 ;
 }
 
 @mixin texbox-light-big {
@@ -19,14 +19,22 @@
   
     background-color: $light-gray-color;
     border: solid $blue-color 3px;
-    border-radius:  25px 25px 25px 25px ;
+    border-radius:  $border-radius-25;
 }
 
 @mixin icon-button {
     background-color: white;
-    border-radius: 50%;
-    border: solid #2833C3 3px;
+    border-radius: $border-radius-50;
+    border: $border-blue;
     width: 5vh;
+    margin-right: 3%;
+}
+
+@mixin li-dasboard {
+    border: $border-blue;
+    border-radius:  $border-radius-50 ;
+    padding: 1%;
+    background-color: $light-gray-color;
 }
 
 
