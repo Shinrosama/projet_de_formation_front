@@ -7,20 +7,17 @@ import Header from '../../component/guest/Header'
 import './userPage.scss'
 
 const UserPage = () => {
-
         useVerifyIfUserIsLogged();
     
         const [user, setUser] = useState(null);
         const token = localStorage.getItem("jwt");
         const decodedToken = jwtDecode(token);
         
-      
         useEffect(() => {
             (async () => {
               const userResponse = await fetch(`http://localhost:3005/api/users/${decodedToken.dataId}`);
               const userResponseData = await userResponse.json();
               setUser(userResponseData.data);
-              // console.log(userResponseData.data);
             })();
           }, [decodedToken.dataId]);
       
@@ -47,13 +44,11 @@ const UserPage = () => {
                         {decodedToken.data.role !== 3 && (
                             <button className="deleteUserBtn" onClick={handleDeleteUser}>Supprimer</button>
                         )}
-                      </div>
-                        
+                      </div>                        
                     </article>
                 ) : (
                     <p>En cours de chargement</p>
-                )}
-                
+                )}               
             </main>
             <Footer/>
         </>

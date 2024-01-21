@@ -75,7 +75,6 @@ const MangaDetailsPage = () => {
   return (
     <>
       <Header />
-
       {manga ? (
         <article className="article">
           <div className="allBloc">
@@ -100,7 +99,6 @@ const MangaDetailsPage = () => {
             <div>
               <p>Donnez votre avis.</p>
             </div>
-
             <div className="reviewsBloc"> 
               {reviews ? (
                 <div>
@@ -117,7 +115,6 @@ const MangaDetailsPage = () => {
               ) : (
                 <p>En cours de chargement</p>
               )}
-
               <form className="formContainer" onSubmit={(event) => handleCreateReview(event, manga.id)}>
                 <label className="noteBloc">
                   Note
@@ -136,7 +133,6 @@ const MangaDetailsPage = () => {
       ) : (
         <p>En cours de chargement</p>
       )}
-
       <Footer/>
     </>
   );

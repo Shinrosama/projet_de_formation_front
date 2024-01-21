@@ -8,7 +8,6 @@
 
 @mixin texbox-dark-big {
 
-
     background-color: $dark-gray-color;
     border: $border-blue;
     border-radius:  $border-radius-25 ;
@@ -16,7 +15,6 @@
 
 @mixin texbox-light-big {
 
-  
     background-color: $light-gray-color;
     border: solid $blue-color 3px;
     border-radius:  $border-radius-25;

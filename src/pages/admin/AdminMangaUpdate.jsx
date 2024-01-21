@@ -4,7 +4,6 @@ import HeaderAdmin from "../../component/admin/HeaderAdmin";
 import { useVerifyIfUserIsLogged } from "../../utils/security-utils";
 import './adminMangaUpdate.scss'
 
-
 const AdminMangaUpdate = () => {
   useVerifyIfUserIsLogged();
 
@@ -30,31 +29,22 @@ const AdminMangaUpdate = () => {
     const genres = event.target.genres.value
     const synopsis = event.target.synopsis.value
     
-    
     const formData = new FormData();
 
-    // dans mon formdata, je créé un champs name, qui contient
-    // le nom issu du champs "name", transformé en json
+    // dans mon formdata, je créé un champs title, qui contient le nom issu du champs "title", transformé en json
        formData.append("title", title)
        formData.append("authors", authors)
        formData.append("genres", genres)
        formData.append("synopsis", synopsis)
-    // formData.append("name", JSON.stringify(name));
-    // formData.append("price", JSON.stringify(price));
     
-    // dans mon formData, je créé un champs file, qui contient
-    // le fichier issu du champs image
+    // dans mon formData, je créé un champs file, qui contient le fichier issu du champs image
     formData.append("image", event.target.image.files[0]);
    
-
-    
-
     const token = localStorage.getItem("jwt");
 
     const updateMangaResponse = await fetch(`http://localhost:3005/api/mangas/withImg/${id}`, {
       method: "PUT",
       headers: {
-        
         Authorization: "Bearer " + token,
       },
       body: formData,

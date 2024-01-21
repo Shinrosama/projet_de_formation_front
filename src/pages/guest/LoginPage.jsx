@@ -61,20 +61,15 @@ const LoginPage = () => {
         <Header/>
         <section className="sectionLog">
         {message && <p>{message}</p>}
-          <form onSubmit={handleLogin} className="formLog">
-            
-            <label className="labelUser">
-              
+          <form onSubmit={handleLogin} className="formLog">            
+            <label className="labelUser">             
               <input className="userLog" placeholder="Nom d'utilisateur" type="text" name="username" />
             </label>
-            <label className="labelPassword">
-              
+            <label className="labelPassword">             
               <input className="passLog" placeholder="Mot de passe" type="password" name="password" />
             </label>
-            <input className="submitLog"  type="submit" value="Se connecter" />
-            
-              <button className="logout" onClick={handleLogout}>Se déconnecter</button>
-            
+            <input className="submitLog"  type="submit" value="Se connecter" />            
+              <button className="logout" onClick={handleLogout}>Se déconnecter</button>            
           </form>
           <div className="btnBloc">
             <Link className="suscribe suscribeDiv" to="/register">
@@ -87,8 +82,7 @@ const LoginPage = () => {
                 Votre compte
               </div>
             </Link>
-          </div>
-          
+          </div>          
         </section>
         <Footer/>
       </>

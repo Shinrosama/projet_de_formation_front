@@ -5,16 +5,13 @@ import { Link } from "react-router-dom";
 import './homePage.scss'
 import Footer from "../../component/guest/Footer";
 
-
 const HomePage = () => {
   const [mangas, setMangas] = useState(null);
 
   useEffect(() => {
     (async () => {
       const mangasResponse = await fetch("http://localhost:3005/api/mangas");
-
       const mangasResponseData = await mangasResponse.json();
-
       setMangas(mangasResponseData);
     })();
   }, []);
@@ -23,33 +20,26 @@ const HomePage = () => {
       <>
       <Header />
         <main className="main">
-          
           <div className="bannerBloc">
             <h1 className="bannerTitle">Mangas / Notes</h1>
             <img className="bannerImg" src={banner} alt="banière" />
           </div>
-
-
           {mangas ? (
             <>
               <section className="container">
                   {mangas.map((manga) => {
                     return (
                       <article className="mangaBloc">
-                        
                         <div className="divTitle">
                           <h2>{manga.title}</h2>
-                        </div>
-                        
-                        <div className="imgBloc1">
-                          
+                        </div>                       
+                        <div className="imgBloc1">                         
                           <Link className="mangaLink" to={`/manga/details/${manga.id}`}><img className="mangaImg" src={manga.imageUrl} alt={manga.title}/></Link>
                         </div>
-                        <Link className="mangaLink" to={`/manga/details/${manga.id}`}><div className="divLink">
-                        Voir le manga
+                          <Link className="mangaLink" to={`/manga/details/${manga.id}`}><div className="divLink">
+                          Voir le manga
                         </div>
-                        </Link>
-                       
+                        </Link>                      
                       </article>
                     );
                   })}

@@ -8,8 +8,6 @@ import './header.scss';
 const Header = () => {
   return (
     <header className="head">
-    
-
       <nav className="nav">
         <ul className="ulNav">
           <li className="liLogo">

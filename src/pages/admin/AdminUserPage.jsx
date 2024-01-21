@@ -32,25 +32,25 @@ const AdminUserPage = () => {
     };
     return (
         <>
-            <HeaderAdmin/>
-            {users?(
-            <main className="mainUser">
-                <h2>Liste des utilisateurs</h2>
-                {users.map((user) => {
-                    return (
-                        <article className="userBloc">
-                                <h2 className="userName">{user.username}</h2>
-                                {decodedToken.data.role !== 3 && (
-                                <button className="deleteUserBtn1" onClick={(event) => handleDeleteUser(event, user.id)}>Supprimer</button>
-                            )}
-                        </article>
-                    );
-                }
-                )}
-            </main>
-            ): (
-                <p>En cours de chargement</p>
-            )}
+          <HeaderAdmin/>
+          {users?(
+          <main className="mainUser">
+              <h2>Liste des utilisateurs</h2>
+              {users.map((user) => {
+                  return (
+                    <article className="userBloc">
+                        <h2 className="userName">{user.username}</h2>
+                        {decodedToken.data.role !== 3 && (
+                        <button className="deleteUserBtn1" onClick={(event) => handleDeleteUser(event, user.id)}>Supprimer</button>
+                        )}
+                    </article>
+                  );
+              }
+              )}
+          </main>
+          ): (
+              <p>En cours de chargement</p>
+          )}
         </>
     ) 
 }

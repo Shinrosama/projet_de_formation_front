@@ -13,9 +13,6 @@ import RegisterPage from "./pages/guest/RegisterPage";
 import AdminUserPage from "./pages/admin/AdminUserPage";
 import UserPage from "./pages/guest/UserPage";
 
-
-
-
 function App() {
   return (
     <BrowserRouter>

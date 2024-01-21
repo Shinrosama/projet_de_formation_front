@@ -8,7 +8,6 @@ const DashboardPage = () => {
   return (
     <main className="mainDash">
       <HeaderAdmin />
-
       <h2 className="titleDash">Vous êtes bien connecté en tant qu'admin</h2>
     </main>
   );
